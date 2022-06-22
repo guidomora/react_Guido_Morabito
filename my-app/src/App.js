@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          primera clase de React en coderhouse!
+          mi tienda va a ser sobre una floreria
         </p>
         <a
           className="App-link"
