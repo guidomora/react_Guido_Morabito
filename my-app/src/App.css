@@ -1,8 +1,9 @@
-.nav {
-  height: 130px;
-  width: 100%;
+nav {
   background-color: #FCD5CE;
+  width: 100%;
+  height: 130px;
 }
+
 
 .flex {
   list-style: none;
@@ -20,13 +21,12 @@
   margin: 30px;
 }
 
-.lista-boton {
-  background-color: #7c9fec;
+.lista-boton :hover {
+  color: aliceblue;
   height: 40px;
-  width: 120px;
 }
 
 .botones-ruta {
-  color: black;
+  color: rgb(255, 255, 255);
   text-decoration: none;
 }
