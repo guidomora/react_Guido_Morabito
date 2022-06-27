@@ -1,7 +1,7 @@
 import React from 'react';
 
 const NavBar = () => {
-    return <div>
+    return <div className='sombra'>
         <nav>
             <ul className="flex">
                 <li className="lista-nav">

@@ -1,3 +1,8 @@
+.sombra {
+  box-shadow: 0 3px 13px 1px rgb(0 0 0 / 10%);
+}
+
+
 nav {
   background-color: #FCD5CE;
   width: 100%;
