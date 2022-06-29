@@ -1,6 +1,7 @@
 import React from 'react';
+import CarWidget from './CartWidget';
 
-const NavBar = () => {
+function NavBar () {
     return <div className='sombra'>
         <nav>
             <ul className="flex">
@@ -29,7 +30,8 @@ const NavBar = () => {
                         <a href="#" className="botones-ruta"> Ramos de flores </a>    
                     </button>
                 </li>
-            </ul>
+                <CarWidget/>
+            </ul>  
         </nav>
     </div>
 };

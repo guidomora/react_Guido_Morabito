@@ -1,7 +1,8 @@
+/* --------------NavBar---------- */
+
 .sombra {
   box-shadow: 0 3px 13px 1px rgb(0 0 0 / 10%);
 }
-
 
 nav {
   background-color: #FCD5CE;
@@ -35,3 +36,16 @@ nav {
   color: rgb(255, 255, 255);
   text-decoration: none;
 }
+/* --------------NavBar---------- */
+/* --------------CarWidget------- */
+
+.boton-cart {
+  height: 50px;
+  width: 50px;
+  margin: 30px;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+
+/* --------------CarWidget------- */
