@@ -1,4 +1,5 @@
 import React from 'react';
+import '../estilos/CartWidget.css';
 
 function CarWidget () {
     return <button type="button" className='btn btn-outline-dark boton-cart'>

@@ -1,0 +1,35 @@
+.ver-clics {
+    height: 80px;
+    width: 500px;
+    margin: 30px;
+    border: solid 2px black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 3px 13px 1px rgb(0 0 0 / 10%);
+}
+
+.boton-menos {
+    height: 80px;
+    width: 150px;
+    background-color: white;
+}
+
+.boton-mas {
+    height: 80px;
+    width: 150px;
+    background-color: white;
+}
+
+.suma {
+    font-size: 45px;
+    font-weight: 700;
+    color: green;
+}
+
+.resta {
+    font-size: 45px;
+    font-weight: 700;
+    color: red;
+}

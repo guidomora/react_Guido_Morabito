@@ -1,5 +1,6 @@
 import React from 'react';
 import CarWidget from './CartWidget';
+import '../estilos/NavBar.css'
 
 function NavBar () {
     return <div className='sombra'>
