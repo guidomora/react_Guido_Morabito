@@ -2,10 +2,10 @@ import React, {useState} from "react";
 import '../estilos/ItemCount.css';
 
 function Contador () {
-    const [valor, setValor] = useState(0);
+    const [valor, setValor] = useState(1);
 
     function Restar () {
-        setValor( preValor => preValor - 1); 
+        setValor( preValor => (preValor > 0 ? valor - 1 : valor)); 
     };
 
     function Sumar () {
