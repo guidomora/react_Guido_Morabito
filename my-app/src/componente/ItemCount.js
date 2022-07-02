@@ -1,25 +1,31 @@
-import React from "react";
+import React, {useState} from "react";
 import '../estilos/ItemCount.css';
 
 function Contador () {
-    const valor = 0;
-    console.log(valor);
+    const [valor, setValor] = useState(0);
+
+    function Restar () {
+        setValor( preValor => preValor - 1); 
+    };
+
+    function Sumar () {
+        setValor( preValor => preValor + 1);
+    };
+
     return (
         <div>
+            <p> Descripcion de los productos. Stock 20 unidades </p>
             <div className='ver-clics'>
-                <button className='boton-menos'>
-                    <p className='resta'>
-                        -
-                    </p>
-                </button>
-                <h1> clics </h1>
-                <button className='boton-mas'>
-                    <p className='suma'>
-                        +
-                    </p>
-                </button>
+                <div className='contenedor' onClick={Restar}>
+                    <p className='resta'> - </p>
+                </div>
+                <h1 className='cantidad'> {valor} </h1>
+                <div className='contenedor' onClick={Sumar}>
+                    <p className='suma'> + </p>
+                </div>
             </div>
         </div>
+        
     )
 };
 
