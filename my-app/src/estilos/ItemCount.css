@@ -36,6 +36,7 @@
     font-weight: 500;
     color: green;
     cursor: pointer;
+    user-select: none;
 }
 
 .resta {
@@ -44,4 +45,5 @@
     font-weight: 500;
     color: red;
     cursor: pointer;
+    user-select: none;
 }
