@@ -14,7 +14,7 @@ function Contador () {
 
     return (
         <div>
-            <p> Descripcion de los productos. Stock 20 unidades </p>
+            <p> Stock 20 unidades </p>
             <div className='ver-clics'>
                 <div className='contenedor' onClick={Restar}>
                     <p className='resta'> - </p>
