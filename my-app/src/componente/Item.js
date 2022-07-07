@@ -12,7 +12,10 @@ function Item ({id, titulo, descripcion, precio, imagen, stock}) {
             <p>{descripcion}</p>
             <p className='item-precio'>{precio}</p>
             <p> {stock} </p>
-            <img src={imagen} alt= {titulo}/>
+            <img className='item-imagen' src={imagen} alt= {titulo}/>
+            <button type='button' className='btn btn-primary item-boton'>
+                        <a href="#" className="botones-ruta"> Detalle del producto </a>    
+                    </button>
             <ItemCount/>
         </div>
     )

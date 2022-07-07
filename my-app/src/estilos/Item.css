@@ -1,5 +1,5 @@
 .item {
-    height: 300px;
+    height: 400px;
     width: 300px;
     background-color: white;
     display: flex;
@@ -19,3 +19,11 @@
 .item-precio {
     font-weight: bold;
 }
+
+.item-imagen {
+    margin: 10px;
+}
+
+.item-boton :hover {
+    color: aliceblue;
+  }
