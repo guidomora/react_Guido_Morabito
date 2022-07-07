@@ -4,7 +4,6 @@ import '../estilos/ItemList.css';
 import { useEffect, useState } from "react";
 
 
-
 function ItemList ({Items}) {
     const [carga, setCarga] = useState(true);
 
@@ -25,12 +24,13 @@ function ItemList ({Items}) {
                 <h2> Cargando productos... </h2>
             ) : ( <>
             
-                {Items.map(({id, titulo, descripcion, precio, imagen}) => (
+                {Items.map(({id, titulo, descripcion, precio, imagen, stock}) => (
                 <Item
                 id={id}  
                 titulo={titulo}
                 descripcion={descripcion}
-                precio={precio} 
+                precio={precio}
+                stock={'stock: '+stock} 
                 imagen={imagen}
                 key={id}/>
                 

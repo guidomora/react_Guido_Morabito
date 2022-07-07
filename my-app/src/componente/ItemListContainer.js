@@ -6,7 +6,6 @@ import productos from '../productos/productos.json'
 
 function ItemListContainer ({greeting}) {
     return <div>{greeting}
-        <ItemCount/>
         <ItemList Items={productos} />
     </div>
 };

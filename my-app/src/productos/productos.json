@@ -3,35 +3,39 @@
         "id": 1,
         "titulo": "Ramo de flores variadas",
         "ramo": "variado chico",
-        "precio": 2500,
+        "precio": 4500,
         "descripcion": "flores variadas",
-        "imagen":"./multimedia/variado.jpg" 
+        "imagen":"./multimedia/variado.jpg",
+        "stock": 20 
     },
 
     {
         "id": 2,
         "titulo": "Ramo de rosas rojas",
         "ramo": "rosas",
-        "precio": 6000,
+        "precio": 8000,
         "descripcion": "rosas rojas",
-        "imagen":"./multimedia/rosas.jpg" 
+        "imagen":"./multimedia/rosas.jpg",
+        "stock": 20 
     },
 
     {
         "id": 3,
         "titulo": "Ramo de liliums",
         "ramo": "liliums",
-        "precio": 3500,
+        "precio": 5500,
         "descripcion": "liliums blancos",
-        "imagen":"./multimedia/liliums.jpg" 
+        "imagen":"./multimedia/liliums.jpg",
+        "stock": 20 
     },
 
     {
         "id": 4,
         "titulo": "Ramo de flores variadas (grande)",
         "ramo": "variado grande",
-        "precio": 7000,
+        "precio": 8000,
         "descripcion": "flores variadas",
-        "imagen":"./multimedia/variado2.jpg" 
+        "imagen":"./multimedia/variado2.jpg",
+        "stock": 20 
     }
 ]

@@ -1,0 +1,21 @@
+.item {
+    height: 300px;
+    width: 300px;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 0 3px 13px 1px rgb(0 0 0 / 10%);
+}
+
+
+.item-titulo {
+    text-align: center;
+    font-size: 22px;
+}
+
+.item-precio {
+    font-weight: bold;
+}
