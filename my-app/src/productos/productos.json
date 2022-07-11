@@ -6,7 +6,8 @@
         "precio": 4500,
         "descripcion": "flores variadas",
         "imagen":"${process.env.PUBLIC_URL}/assets/variado.jpg",
-        "stock": 20 
+        "stock": 20,
+        "enlace": "${process.env.PUBLIC_URL}/productos/producto1.html" 
     },
 
     {

@@ -4,7 +4,7 @@ import ItemCount from './ItemCount';
 
 
 
-function Item ({id, titulo, descripcion, precio, imagen, stock}) {
+function Item ({id, titulo, descripcion, precio, imagen, stock, enlace}) {
   
     return (
         <div className='item'>
@@ -14,8 +14,8 @@ function Item ({id, titulo, descripcion, precio, imagen, stock}) {
             <p> {stock} </p>
             <img className='item-imagen' src={imagen} alt= {titulo}/>
             <button type='button' className='btn btn-primary item-boton'>
-                        <a href="#" className="botones-ruta"> Detalle del producto </a>    
-                    </button>
+                <a href={enlace} className="botones-ruta"> Detalle del producto </a>    
+            </button>
             <ItemCount/>
         </div>
     )
