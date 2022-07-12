@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 
 
+
 function ItemDetail ({id, descripcion, imagen}) {
     return(
         <div key={id}>
