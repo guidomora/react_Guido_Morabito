@@ -1,11 +1,9 @@
-import React, {useState, useEffect} from "react";
-
-
+import React from "react";
 
 function ItemDetail ({id, descripcion, imagen}) {
     return(
         <div key={id}>
-            <p>{descripcion}</p>
+            <p> hola{descripcion}</p>
             <img src={imagen}/>
         </div>
     )

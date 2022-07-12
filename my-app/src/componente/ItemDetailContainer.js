@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import ItemDetail from './ItemDetail';
 import detalle from '../productos/detalle'
+import promesa from "../productos/detalle";
 
 
 // const GetItem = () => {
@@ -46,19 +47,42 @@ import detalle from '../productos/detalle'
 //     )                                
 //  };
 
-const getItem = () =>{
-    {fetch('../productos/detalle.js')
-        .then(function(response){
-            return response.json();
-        })
-        .then(function(detalle){
-            console.log(detalle);
-        })
-    }
-}
+const getItem = new Promise((resolve, reject) => {
+    let promResuelta = true;
+    setTimeout(() => {
+        if (promResuelta) {
+        resolve(detalle);
+        } else {
+        reject(console.log("error al cargar"));
+        }
+})}, 2000);
 
 function ItemDetailContainer () {
+        const [resultados, setResultados] = useState(true)
 
+    useEffect(() =>{
+        getItem
+        .then((data)=>{
+            setResultados(data);
+        })
+        .catch((error)=>{
+            console.log(error)
+        })
+    }, [])
+
+    return (
+    <div> {resultados ? (<h2> cargando detalle de productos... </h2>)
+            :( 
+                detalle.map(({id, descripcion, imagen})=>(
+                    <ItemDetail
+                    key={id}
+                    descripcion={descripcion}
+                    imagen={imagen} 
+                    />
+                ))
+            )}
+    </div>
+    )   
 };
 
 

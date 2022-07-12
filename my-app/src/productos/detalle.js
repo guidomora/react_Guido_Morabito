@@ -28,14 +28,5 @@
     }
 ];
 
-const promesa = new Promise((resolve, reject) => {
-    let promResuelta = true;
-    setTimeout(() => {
-        if (promResuelta) {
-        resolve(detalle);
-        } else {
-        reject(console.log("error al cargar"));
-        }
-})}, 2000);
 
-export default promesa;
+

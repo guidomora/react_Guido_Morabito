@@ -1,7 +1,7 @@
 import React from "react";
 import Item from "./Item";
 import '../estilos/ItemList.css';
-import DetailContainer from "./ItemDetailContainer";
+import ItemDetailContainer from "./ItemDetailContainer";
 
 
 function ItemList ({Items}) {
@@ -19,7 +19,7 @@ function ItemList ({Items}) {
                 enlace={enlace}
                 key={id}/>
             ))}
-            <DetailContainer/>
+            <ItemDetailContainer/>
         </div>
     )
 
