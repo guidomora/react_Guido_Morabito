@@ -6,8 +6,8 @@ import ItemDetailContainer from "./ItemDetailContainer";
 
 function ItemList ({Items}) {
     return (
-        
-        <div className='ItemList'>
+        <div>
+            <div className='ItemList'>
                 {Items.map(({id, titulo, descripcion, precio, imagen, stock, enlace}) => (
                 <Item
                 id={id}  
@@ -19,8 +19,12 @@ function ItemList ({Items}) {
                 enlace={enlace}
                 key={id}/>
             ))}
-            <ItemDetailContainer/>
+            </div>
+            <div> 
+                < ItemDetailContainer/>
+            </div>
         </div>
+        
     )
 
 };

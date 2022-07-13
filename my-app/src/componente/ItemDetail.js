@@ -1,10 +1,11 @@
 import React from "react";
+import '../estilos/ItemDetail.css';
 
 function ItemDetail ({id, descripcion, imagen}) {
     return(
-        <div key={id}>
-            <p> hola{descripcion}</p>
-            <img src={imagen}/>
+        <div className='detalle-container' key={id}>
+            <p> {descripcion}</p>
+            <img className='detalle-imagen' src={imagen} />
         </div>
     )
 };

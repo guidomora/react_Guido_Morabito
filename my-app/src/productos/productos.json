@@ -5,9 +5,8 @@
         "ramo": "variado chico",
         "precio": 4500,
         "descripcion": "flores variadas",
-        "imagen":"${process.env.PUBLIC_URL}/assets/variado.jpg",
-        "stock": 20,
-        "enlace": "${process.env.PUBLIC_URL}/productos/producto1.html" 
+        "imagen":"${process.env.PUBLIC_URL}/assets/variado.jpgg",
+        "stock": 20
     },
 
     {
@@ -16,7 +15,7 @@
         "ramo": "rosas",
         "precio": 8000,
         "descripcion": "rosas rojas",
-        "imagen":"${process.env.PUBLIC_URL}/assets/rosas.jpg",
+        "imagen":"../multimedia/rosas.jpgg",
         "stock": 20 
     },
 
@@ -26,7 +25,7 @@
         "ramo": "liliums",
         "precio": 5500,
         "descripcion": "liliums blancos",
-        "imagen":"${process.env.PUBLIC_URL}/assets/liliums.jpg",
+        "imagen":"../multimedia/liliums.jpgg",
         "stock": 20
     },
 
@@ -36,7 +35,7 @@
         "ramo": "variado grande",
         "precio": 8000,
         "descripcion": "flores variadas",
-        "imagen":"${process.env.PUBLIC_URL}/assets/variado2.jpg",
+        "imagen":"../multimedia/variado2.jpgg",
         "stock": 20 
     }
 ]

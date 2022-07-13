@@ -1,11 +1,18 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
 .ItemList {
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
+    margin: 15px;
 }
 
 .carga {
     text-align: center;
 }
+
