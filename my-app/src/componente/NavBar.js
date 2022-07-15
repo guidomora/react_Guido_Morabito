@@ -1,6 +1,7 @@
 import React from 'react';
 import CarWidget from './CartWidget';
-import '../estilos/NavBar.css'
+import '../estilos/NavBar.css';
+import { Link } from 'react-router-dom';
 
 function NavBar () {
     return <div className='sombra'>
@@ -8,31 +9,31 @@ function NavBar () {
             <ul className="flex">
                 <li className="lista-nav">
                     <button type="button" className="btn btn-primary lista-boton">
-                        <a href="#" className="botones-ruta"> Inicio  </a>
+                        <Link to="/" className="botones-ruta">Inicio</Link>
                     </button>
                 </li>
                 <li className="lista-nav">
                      <button type="button" className="btn btn-primary lista-boton">
-                        <a href="#" className="botones-ruta"> Cajas con flores </a>
+                        <Link to="/CajasConFlores" className="botones-ruta">Cajas con flores</Link>
                     </button>
                 </li>
                 <li className="lista-nav">
                     <button type="button" className="btn btn-primary lista-boton">
-                        <a href="#" className="botones-ruta"> Condolencias </a>   
+                        <Link to="/Condolencias" className="botones-ruta">Condolencias</Link>      
                     </button>
                 </li>
                 <li className="lista-nav">
                     <button type="button" className="btn btn-primary lista-boton">
-                        <a href="#" className="botones-ruta"> Arreglos florales </a>   
+                        <Link to="/ArreglosFlorales" className="botones-ruta">Arreglos florales</Link>   
                     </button>
                 </li>
                 <li className="lista-nav">
                     <button type="button" className="btn btn-primary lista-boton">
-                        <a href="#" className="botones-ruta"> Ramos de flores </a>    
+                        <Link to="/RamosDeFlores" className="botones-ruta">Ramos de flores</Link>    
                     </button>
                 </li>
                 <CarWidget/>
-            </ul>  
+            </ul>
         </nav>
     </div>
 };

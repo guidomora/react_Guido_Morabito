@@ -5,17 +5,17 @@
         "ramo": "variado chico",
         "precio": 4500,
         "descripcion": "flores variadas",
-        "imagen":"${process.env.PUBLIC_URL}/assets/variado.jpgg",
+        "imagen":"../multimedia/variado.jpg",
         "stock": 20
     },
 
     {
         "id": 2,
         "titulo": "Ramo de rosas rojas",
-        "ramo": "rosas",
+        "tipo": "rosas",
         "precio": 8000,
         "descripcion": "rosas rojas",
-        "imagen":"../multimedia/rosas.jpgg",
+        "imagen":"../multimedia/rosas.jpg",
         "stock": 20 
     },
 
@@ -23,19 +23,199 @@
         "id": 3,
         "titulo": "Ramo de liliums",
         "ramo": "liliums",
-        "precio": 5500,
+        "tipo": 5500,
         "descripcion": "liliums blancos",
-        "imagen":"../multimedia/liliums.jpgg",
+        "imagen":"../multimedia/liliums.jpg",
         "stock": 20
     },
 
     {
         "id": 4,
         "titulo": "Ramo de flores variadas (grande)",
-        "ramo": "variado grande",
+        "tipo": "variado grande",
         "precio": 8000,
         "descripcion": "flores variadas",
-        "imagen":"../multimedia/variado2.jpgg",
+        "imagen":"../multimedia/variado2.jpg",
+        "stock": 20 
+    },
+
+    {
+        "id": 5,
+        "titulo": "Ramo de flores secas",
+        "tipo": "flores secas",
+        "precio": 3500,
+        "descripcion": "flores variadas secas",
+        "imagen":"../multimedia/seco.jpg",
+        "stock": 20 
+    },
+
+    {
+        "id": 6,
+        "titulo": "Caja de rosas rojas y blancas",
+        "tipo": "Caja",
+        "precio": 23000,
+        "descripcion": "2 docenas de rosas rojas y blancas importadas en forma de corazón ",
+        "imagen":"../multimedia/caja1.jpeg",
+        "stock": 20 
+    },
+    
+    {
+        "id": 7,
+        "titulo": "Caja de rosas con chocolates",
+        "tipo": "Caja",
+        "precio": 23000,
+        "descripcion": "2 docenas de rosas rojas importadas con ferrero rocher y un globo",
+        "imagen":"../multimedia/caja2.jpeg",
+        "stock": 20 
+    },
+    
+    {
+        "id": 8,
+        "titulo": "Caja de rosas chocolates y champagne",
+        "tipo": "Caja",
+        "precio": 20000,
+        "descripcion": "1 docena de rosas rojas importadas con 1 chandon 187ml, bombones y un globo",
+        "imagen":"../multimedia/caja3.jpeg",
+        "stock": 20 
+    },
+    
+    {
+        "id": 9,
+        "titulo": "Caja variada S",
+        "tipo": "Caja",
+        "precio": 6000,
+        "descripcion": "Caja pequeña de flores variadas de estacion",
+        "imagen":"../multimedia/caja4.jpeg",
+        "stock": 20 
+    },
+
+    {
+        "id": 10,
+        "titulo": "Caja variada M",
+        "tipo": "Caja",
+        "precio": 8000,
+        "descripcion": "Caja mediana de flores variadas de estacion",
+        "imagen":"../multimedia/caja5.jpeg",
+        "stock": 20 
+    },
+    
+    {
+        "id": 11,
+        "titulo": "Caja variada L",
+        "tipo": "Caja",
+        "precio": 10000,
+        "descripcion": "Caja grande de flores variadas de estacion",
+        "imagen":"../multimedia/caja7.jpeg",
+        "stock": 20 
+    },
+
+    {
+        "id": 12,
+        "titulo": "Corona de flores S",
+        "tipo": "Corona",
+        "precio": 18000,
+        "descripcion": "Corona de flores base para velatorio con cinta",
+        "imagen":"../multimedia/corona1.jpg",
+        "stock": 20 
+    },
+    
+    {
+        "id": 13,
+        "titulo": "Corona de flores M",
+        "tipo": "Corona",
+        "precio": 24000,
+        "descripcion": "Corona de flores mediana para velatorio con cinta",
+        "imagen":"../multimedia/corona2.jpg",
+        "stock": 20 
+    },
+    
+    {
+        "id": 14,
+        "titulo": "Corona de flores L",
+        "tipo": "Corona",
+        "precio": 27000,
+        "descripcion": "Corona de flores grande para velatorio con cinta",
+        "imagen":"../multimedia/corona3.jpg",
+        "stock": 20 
+    },
+    
+    {
+        "id": 15,
+        "titulo": "Caja variada XL",
+        "tipo": "Corona",
+        "precio": 40000,
+        "descripcion": "Corona de flores grande premium para velatorio con cinta",
+        "imagen":"../multimedia/caja4.jpg",
+        "stock": 20 
+    },
+
+    {
+        "id": 16,
+        "titulo": "Bouquet 1",
+        "tipo": "Bouquet",
+        "precio": 9000,
+        "descripcion": "Bouquet de flores variadas para velatorio",
+        "imagen":"../multimedia/bouquet1.jpeg",
+        "stock": 20 
+    },
+    
+    {
+        "id": 17,
+        "titulo": "Bouquet 2",
+        "tipo": "Bouquet",
+        "precio": 10000,
+        "descripcion": "Bouquet de flores variadas para velatorio",
+        "imagen":"../multimedia/bouquet1.jpeg",
+        "stock": 20 
+    },
+    
+    {
+        "id": 18,
+        "titulo": "Cruz",
+        "tipo": "Cruz",
+        "precio": 10000,
+        "descripcion": "Cruz hecha con Crisantemos para velatorio",
+        "imagen":"../multimedia/cruz.jpeg",
+        "stock": 20 
+    },
+
+    {
+        "id": 19,
+        "titulo": "Arreglo 1",
+        "tipo": "Arreglo floral",
+        "precio": 17000,
+        "descripcion": "Arreglo floral en canasta (Se arman en base a los gustos del cliente)",
+        "imagen":"../multimedia/motivo1.jpg",
+        "stock": 20 
+    },
+
+    {
+        "id": 20,
+        "titulo": "Arreglo 2",
+        "tipo": "Arreglo floral",
+        "precio": 20000,
+        "descripcion": "Arreglo floral en jarrón de vidrio (Se arman en base a los gustos del cliente)",
+        "imagen":"../multimedia/motivo2.jpg",
+        "stock": 20 
+    },
+    
+    {
+        "id": 21,
+        "titulo": "Arreglo 3",
+        "tipo": "Arreglo floral",
+        "precio": 20000,
+        "descripcion": "Arreglo floral en maceta con 2 docenas de rosas rojas importadas (Se arman en base a los gustos del cliente)",
+        "imagen":"../multimedia/motivo3.jpeg",
+        "stock": 20 
+    },
+    
+    {
+        "id": 22,
+        "titulo": "Arreglo 4",
+        "tipo": "Arreglo floral",
+        "precio": 40000,
+        "descripcion": "Arreglo floral en canasta, 42 rosas rojas importadas con follaje y globos (Se arman en base a los gustos del cliente)",
+        "imagen":"../multimedia/motivo4.jpeg",
         "stock": 20 
     }
 ]

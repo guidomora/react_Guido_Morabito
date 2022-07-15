@@ -3,11 +3,26 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import CajasConFlores from './views/CajasConFlores';
+import Condolencias from './views/Condolencias';
+import ArreglosFlorales from './views/ArreglosFlorales';
+import RamosDeFlores from './views/RamosDeFlores';
+import Cart from './views/Cart';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />}/>
+          <Route path="/CajasConFlores" element={<CajasConFlores />} />
+          <Route path="/Condolencias" element={<Condolencias />} />
+          <Route path="/ArreglosFlorales" element={<ArreglosFlorales />} />
+          <Route path="/RamosDeFlores" element={<RamosDeFlores />} />
+          <Route path="/Cart" element={<Cart />} />
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

@@ -8,15 +8,15 @@ function ItemList ({Items}) {
     return (
         <div>
             <div className='ItemList'>
-                {Items.map(({id, titulo, descripcion, precio, imagen, stock, enlace}) => (
+                {Items.map(({id, titulo, descripcion, tipo, precio, imagen, stock}) => (
                 <Item
                 id={id}  
                 titulo={titulo}
                 descripcion={descripcion}
+                tipo={tipo}
                 precio={precio}
-                stock={'stock: '+stock} 
+                stock={'Stock: '+stock} 
                 imagen={imagen}
-                enlace={enlace}
                 key={id}/>
             ))}
             </div>

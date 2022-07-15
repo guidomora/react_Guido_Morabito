@@ -1,6 +1,11 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
 .item {
-    height: 400px;
-    width: 300px;
+    height: 500px;
+    width: 450px;
     background-color: white;
     display: flex;
     flex-wrap: wrap;
@@ -8,20 +13,38 @@
     justify-content: space-evenly;
     align-items: center;
     box-shadow: 0 3px 13px 1px rgb(0 0 0 / 10%);
+    margin: 7px;
+    padding: 0px;
 }
 
 
 .item-titulo {
     text-align: center;
     font-size: 22px;
+    margin: 0px;
 }
 
 .item-precio {
     font-weight: bold;
+    margin: 0px;
+}
+
+.item-descripcion {
+    font-size: 16px;
+    text-align: center;
+    margin: 0px;
+    padding: 3px;
 }
 
 .item-imagen {
-    margin: 10px;
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+    margin: 0px;
+}
+
+.item-stock {
+    margin: 0px;
 }
 
 .item-boton :hover {
