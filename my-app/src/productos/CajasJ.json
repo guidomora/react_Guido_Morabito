@@ -1,0 +1,61 @@
+[
+    {
+        "id": 6,
+        "titulo": "Caja de rosas rojas y blancas",
+        "tipo": "Caja",
+        "precio": 23000,
+        "descripcion": "2 docenas de rosas rojas y blancas importadas en forma de corazón ",
+        "imagen":"../multimedia/caja1.jpeg",
+        "stock": 20 
+    },
+    
+    {
+        "id": 7,
+        "titulo": "Caja de rosas con chocolates",
+        "tipo": "Caja",
+        "precio": 23000,
+        "descripcion": "2 docenas de rosas rojas importadas con ferrero rocher y un globo",
+        "imagen":"../multimedia/caja2.jpeg",
+        "stock": 20 
+    },
+    
+    {
+        "id": 8,
+        "titulo": "Caja de rosas chocolates y champagne",
+        "tipo": "Caja",
+        "precio": 20000,
+        "descripcion": "1 docena de rosas rojas importadas con 1 chandon 187ml, bombones y un globo",
+        "imagen":"../multimedia/caja3.jpeg",
+        "stock": 20 
+    },
+    
+    {
+        "id": 9,
+        "titulo": "Caja variada S",
+        "tipo": "Caja",
+        "precio": 6000,
+        "descripcion": "Caja pequeña de flores variadas de estacion",
+        "imagen":"../multimedia/caja4.jpeg",
+        "stock": 20 
+    },
+
+    {
+        "id": 10,
+        "titulo": "Caja variada M",
+        "tipo": "Caja",
+        "precio": 8000,
+        "descripcion": "Caja mediana de flores variadas de estacion",
+        "imagen":"../multimedia/caja5.jpeg",
+        "stock": 20 
+    },
+    
+    {
+        "id": 11,
+        "titulo": "Caja variada L",
+        "tipo": "Caja",
+        "precio": 10000,
+        "descripcion": "Caja grande de flores variadas de estacion",
+        "imagen":"../multimedia/caja7.jpeg",
+        "stock": 20 
+    }
+]

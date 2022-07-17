@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import NavBar from "../componente/NavBar";
 import Cajas from "../componente/Cajas";
+import NavBar from "../componente/NavBar";
+//import CajasJ from "../productos/CajasJ.json";
 import productos from '../productos/productos.json'
 
 
@@ -13,7 +14,7 @@ function CajasConFlores() {
         .then(function(response){
             return response.json
         })
-        .then(function(productos){
+        .then(function(cajas){
             setResultados(setTimeout(setCarga, 2000, false))
         })}
     }, [])
@@ -24,14 +25,15 @@ function CajasConFlores() {
             <div>
                 <NavBar />
             </div>
-            <div className='contenedor'> {carga ? (<h2> cargando detalle de productos... </h2>)
-                :( 
-                    productos.filter((productos => productos.tipo === "Caja")(
-                        <Cajas/>
-                    ))
-                )}
+            <div className='ItemList'>
+            {carga ? (
+            <h2 className='carga'> Cargando productos... </h2>
+            ) : ( (productos.filter(productos => productos.tipo == 'Caja')(
+                <Cajas />
+            ))
+        )}
             </div>
-        </div>    
+        </div>
     )  
 };
 

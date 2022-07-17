@@ -1,7 +1,10 @@
-import React from "react";
-import productos from '../productos/productos.json';
+import React  from "react";
+import CajasJ from '../productos/CajasJ.json';
+
 
 function Cajas ({id, titulo, descripcion, precio, imagen, stock}) {
+
+
     return (
         <div>
             <h2 className='item-titulo'>{titulo}</h2>
