@@ -8,6 +8,7 @@ import productos from '../productos/productos.json'
 function CajasConFlores() {
     const [resultados, setResultados] = useState([]);
     const [carga, setCarga] = useState(true);
+    const filtrado = productos.filter(productos =>productos.tipo == 'Caja');
 
     useEffect(() => {
         {fetch('../productos/productos.json')

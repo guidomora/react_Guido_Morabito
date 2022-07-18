@@ -9,6 +9,7 @@ import Condolencias from './views/Condolencias';
 import ArreglosFlorales from './views/ArreglosFlorales';
 import RamosDeFlores from './views/RamosDeFlores';
 import Cart from './views/Cart';
+import Detail from './views/Detail';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -16,6 +17,7 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />}/>
+        <Route path="productos/:id" element={<Detail />} />
           <Route path="/CajasConFlores" element={<CajasConFlores />} />
           <Route path="/Condolencias" element={<Condolencias />} />
           <Route path="/ArreglosFlorales" element={<ArreglosFlorales />} />
