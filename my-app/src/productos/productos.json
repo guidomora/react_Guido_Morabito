@@ -2,7 +2,7 @@
     {
         "id": 1,
         "titulo": "Ramo de flores variadas",
-        "ramo": "variado chico",
+        "tipo": "Ramo",
         "precio": 4500,
         "descripcion": "flores variadas",
         "imagen":"../multimedia/variado.jpg",
@@ -12,7 +12,7 @@
     {
         "id": 2,
         "titulo": "Ramo de rosas rojas",
-        "tipo": "rosas",
+        "tipo": "Ramo",
         "precio": 8000,
         "descripcion": "rosas rojas",
         "imagen":"../multimedia/rosas.jpg",
@@ -22,8 +22,8 @@
     {
         "id": 3,
         "titulo": "Ramo de liliums",
-        "ramo": "liliums",
-        "tipo": 5500,
+        "tipo": "Ramo",
+        "precio": 5500,
         "descripcion": "liliums blancos",
         "imagen":"../multimedia/liliums.jpg",
         "stock": 20
@@ -32,7 +32,7 @@
     {
         "id": 4,
         "titulo": "Ramo de flores variadas (grande)",
-        "tipo": "variado grande",
+        "tipo": "Ramo",
         "precio": 8000,
         "descripcion": "flores variadas",
         "imagen":"../multimedia/variado2.jpg",
@@ -42,7 +42,7 @@
     {
         "id": 5,
         "titulo": "Ramo de flores secas",
-        "tipo": "flores secas",
+        "tipo": "Ramo",
         "precio": 3500,
         "descripcion": "flores variadas secas",
         "imagen":"../multimedia/seco.jpg",
@@ -55,7 +55,7 @@
         "tipo": "Caja",
         "precio": 23000,
         "descripcion": "2 docenas de rosas rojas y blancas importadas en forma de corazón ",
-        "imagen":"../multimedia/caja1.jpeg",
+        "imagen":"../multimedia/caja1.jpg",
         "stock": 20 
     },
     
@@ -112,7 +112,7 @@
     {
         "id": 12,
         "titulo": "Corona de flores S",
-        "tipo": "Corona",
+        "tipo": "Condolencias",
         "precio": 18000,
         "descripcion": "Corona de flores base para velatorio con cinta",
         "imagen":"../multimedia/corona1.jpg",
@@ -122,7 +122,7 @@
     {
         "id": 13,
         "titulo": "Corona de flores M",
-        "tipo": "Corona",
+        "tipo": "Condolencias",
         "precio": 24000,
         "descripcion": "Corona de flores mediana para velatorio con cinta",
         "imagen":"../multimedia/corona2.jpg",
@@ -132,7 +132,7 @@
     {
         "id": 14,
         "titulo": "Corona de flores L",
-        "tipo": "Corona",
+        "tipo": "Condolencias",
         "precio": 27000,
         "descripcion": "Corona de flores grande para velatorio con cinta",
         "imagen":"../multimedia/corona3.jpg",
@@ -141,18 +141,18 @@
     
     {
         "id": 15,
-        "titulo": "Caja variada XL",
-        "tipo": "Corona",
+        "titulo": "Corona de flores XL",
+        "tipo": "Condolencias",
         "precio": 40000,
         "descripcion": "Corona de flores grande premium para velatorio con cinta",
-        "imagen":"../multimedia/caja4.jpg",
+        "imagen":"../multimedia/corona4.jpg",
         "stock": 20 
     },
 
     {
         "id": 16,
         "titulo": "Bouquet 1",
-        "tipo": "Bouquet",
+        "tipo": "Condolencias",
         "precio": 9000,
         "descripcion": "Bouquet de flores variadas para velatorio",
         "imagen":"../multimedia/bouquet1.jpeg",
@@ -162,7 +162,7 @@
     {
         "id": 17,
         "titulo": "Bouquet 2",
-        "tipo": "Bouquet",
+        "tipo": "Condolencias",
         "precio": 10000,
         "descripcion": "Bouquet de flores variadas para velatorio",
         "imagen":"../multimedia/bouquet1.jpeg",
@@ -172,7 +172,7 @@
     {
         "id": 18,
         "titulo": "Cruz",
-        "tipo": "Cruz",
+        "tipo": "Condolencias",
         "precio": 10000,
         "descripcion": "Cruz hecha con Crisantemos para velatorio",
         "imagen":"../multimedia/cruz.jpeg",

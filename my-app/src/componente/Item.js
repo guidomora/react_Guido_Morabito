@@ -6,7 +6,7 @@ import ItemCount from './ItemCount';
 
 
 
-function Item ({id, titulo, descripcion, precio, imagen, stock, enlace}) {
+function Item ({id, titulo, descripcion, precio, imagen, stock}) {
   
     return (
         <div className='item'>
@@ -16,7 +16,7 @@ function Item ({id, titulo, descripcion, precio, imagen, stock, enlace}) {
             <p className='item-precio'>$ {precio}</p>
             <p className='item-stock'> {stock} </p>
             <button type='button' className='btn btn-primary item-boton'>
-                <Link to={"productos/" + id}>Detalle del producto</Link>
+                <Link to={"productos/" + id}> Detalle del producto </Link>
             </button>
             <ItemCount/>
         </div>

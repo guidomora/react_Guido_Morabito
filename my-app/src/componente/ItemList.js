@@ -2,7 +2,7 @@ import React from "react";
 import Item from "./Item";
 import '../estilos/ItemList.css';
 import ItemDetailContainer from "./ItemDetailContainer";
-import { Link } from "react-router-dom";
+
 
 
 function ItemList ({Items}) {
@@ -20,9 +20,6 @@ function ItemList ({Items}) {
                 imagen={imagen}
                 key={id}/>
             ))}
-            </div>
-            <div> 
-                < ItemDetailContainer/>
             </div>
         </div>
         
