@@ -14,22 +14,22 @@ function NavBar () {
                 </li>
                 <li className="lista-nav">
                      <button type="button" className="btn btn-primary lista-boton">
-                        <Link to="/CajasConFlores" className="botones-ruta">Cajas con flores</Link>
+                        <Link to="/CajasConFlores/1" className="botones-ruta">Cajas con flores</Link>
                     </button>
                 </li>
                 <li className="lista-nav">
                     <button type="button" className="btn btn-primary lista-boton">
-                        <Link to="/Condolencias" className="botones-ruta">Condolencias</Link>      
+                        <Link to="/Condolencias/2" className="botones-ruta">Condolencias</Link>      
                     </button>
                 </li>
                 <li className="lista-nav">
                     <button type="button" className="btn btn-primary lista-boton">
-                        <Link to="/ArreglosFlorales" className="botones-ruta">Arreglos florales</Link>   
+                        <Link to="/ArreglosFlorales/3" className="botones-ruta">Arreglos florales</Link>   
                     </button>
                 </li>
                 <li className="lista-nav">
                     <button type="button" className="btn btn-primary lista-boton">
-                        <Link to="/RamosDeFlores" className="botones-ruta">Ramos de flores</Link>    
+                        <Link to="/RamosDeFlores/4" className="botones-ruta">Ramos de flores</Link>    
                     </button>
                 </li>
                 <CarWidget/>

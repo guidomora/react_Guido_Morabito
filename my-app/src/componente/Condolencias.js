@@ -14,9 +14,9 @@ function Condolencias ({id, titulo, descripcion, precio, imagen, stock}) {
             <p className='item-descripcion'>{descripcion}</p>
             <p className='item-precio'>$ {precio}</p>
             <p className='item-stock'> {stock} </p>
-            <button type='button' className='btn btn-primary item-boton'>
-                <Link to={"productos/" + id}> Detalle del producto </Link>
-            </button>
+            <span>
+                <Link to={"productos/" + id} className='btn btn-primary item-boton'> Detalle del producto </Link>
+            </span>
             <ItemCount />
         </div>
     )

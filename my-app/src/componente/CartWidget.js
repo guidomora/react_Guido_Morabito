@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 function CarWidget () {
     return <button type="button" className='btn btn-outline-dark boton-cart'>
-        <Link to="/Cart" className='btn boton-cart'>
+        <Link to="/Cart/5" className='btn boton-cart'>
             <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"

@@ -11,7 +11,7 @@ function Detail () {
     const [resultados, setResultados] = useState()
     const [err, setErr] = useState("")
     useEffect(() =>{
-        {fetch("../productos/detalle.json" + params.id)
+        {fetch("../productos/productos.json/" + params.id)
         .then((res) => res.json())
         .then((json) => {
             setResultados(json)

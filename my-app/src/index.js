@@ -18,11 +18,11 @@ root.render(
       <Routes>
         <Route path="/" element={<App />}/>
         <Route path="productos/:id" element={<Detail />} />
-          <Route path="/CajasConFlores" element={<CajasConFloresViews />} />
-          <Route path="/Condolencias" element={<CondolenciasViews />} />
-          <Route path="/ArreglosFlorales" element={<ArreglosFloralesViews/>} />
-          <Route path="/RamosDeFlores" element={<RamosDeFloresViews />} />
-          <Route path="/Cart" element={<CartViews />} />
+        <Route path="/CajasConFlores/1" element={<CajasConFloresViews />} />
+        <Route path="/Condolencias/2" element={<CondolenciasViews />} />
+        <Route path="/ArreglosFlorales/3" element={<ArreglosFloralesViews/>} />
+        <Route path="/RamosDeFlores/4" element={<RamosDeFloresViews />} />
+        <Route path="/Cart/5" element={<CartViews />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
