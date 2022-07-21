@@ -4,14 +4,13 @@ import ItemCount from '../componente/ItemCount'
 import { Link } from "react-router-dom";
 
 
-function Cajas ({id, titulo, descripcion, precio, imagen, stock}) {
+function Cajas ({id, titulo, precio, imagen, stock}) {
 
 
     return (
         <div className='item'>
             <h2 className='item-titulo' id={id}>{titulo}</h2>
             <img className='item-imagen' src={imagen} alt= {titulo}/>
-            <p className='item-descripcion'>{descripcion}</p>
             <p className='item-precio'>$ {precio}</p>
             <p className='item-stock'> {stock} </p>
             <span>

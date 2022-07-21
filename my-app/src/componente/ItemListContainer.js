@@ -22,7 +22,7 @@ function ItemListContainer ({greeting}) {
     
 
 
-    return <div>{greeting}
+    return <div>
         {carga ? (
             <h2 className='carga'> Cargando productos... </h2>
             ) : ( <>

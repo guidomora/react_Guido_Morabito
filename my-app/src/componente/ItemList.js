@@ -1,7 +1,7 @@
 import React from "react";
 import Item from "./Item";
 import '../estilos/ItemList.css';
-import ItemDetailContainer from "./ItemDetailContainer";
+
 
 
 

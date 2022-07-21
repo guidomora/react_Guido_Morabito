@@ -3,6 +3,13 @@
     padding: 0px;
 }
 
+.container-count {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .ver-clics {
     height: 30px;
     width: 200px;
@@ -47,4 +54,8 @@
     color: red;
     cursor: pointer;
     user-select: none;
+}
+
+.boton-agregado :hover {
+    color: aliceblue;
 }

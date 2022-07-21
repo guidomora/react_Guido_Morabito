@@ -1,8 +1,13 @@
 import React, {useState} from "react";
 import '../estilos/ItemCount.css';
 
-function Contador () {
+function Contador ({stock, onAdd}) {
     const [valor, setValor] = useState(0);
+
+    const [mostrarCarrito, setMostrarCarrito] = useState(false)
+    const showListCart = (evento) => {
+    setMostrarCarrito(true)
+}
 
     function Restar () {
         setValor( preValor => (preValor > 0 ? valor - 1 : valor)); 
@@ -13,7 +18,7 @@ function Contador () {
     };
 
     return (
-        <div>
+        <div className='container-count'>
             <div className='ver-clics'>
                 <div className='contenedor' onClick={Restar}>
                     <p className='resta'> - </p>
@@ -23,9 +28,20 @@ function Contador () {
                     <p className='suma'> + </p>
                 </div>
             </div>
+            <div>  
+            </div>
+            {showListCart && (
+        <button className='boton-compra1 btn btn-primary boton-agregado' onClick={ () => {
+            if (valor <= stock){
+                onAdd(valor);
+            } else{
+                alert("No contamos con esa cantidad de productos")
+            }
+        }}>Agregar al carrito</button>)}
         </div>
-        
     )
-};
+}; 
+
+<button > Agregar al Carrito </button>
 
 export default Contador;

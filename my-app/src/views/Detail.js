@@ -1,26 +1,27 @@
 import React, {useEffect, useState} from "react";
 import {useParams} from 'react-router-dom';
-import '../estilos/Item.css'
+import { Link } from "react-router-dom";
+import '../estilos/ItemDetail.css'
 import NavBar from "../componente/NavBar";
+import ItemCount from '../componente/ItemCount';
 
 
 
 
-function Detail () {
+function Detail ({onAdd}) {
     let params = useParams();
     const [resultados, setResultados] = useState()
     const [err, setErr] = useState("")
-    useEffect(() =>{
-        {fetch("../productos/productos.json/" + params.id)
-        .then((res) => res.json())
-        .then((json) => {
-            setResultados(json)
-        })
-        .catch((err) => {
-            setErr("Hubo un error")
-        })
-        }
-    }, [params.id])
+    const [unidadProducto, setUnidadProducuto] = useState(true)
+
+
+
+    useEffect(() => {
+        fetch("https://fakestoreapi.com/products/" + params.id)
+            .then((res) => res.json())
+            .then((resultados) => setResultados(resultados))
+            .catch(() => setErr(err));
+    }, [params.id]);
 
     return (
         <div>
@@ -28,13 +29,26 @@ function Detail () {
                 <NavBar />
             </div>
              {resultados && (
-                <div>
-                <h2 className='item-titulo'>{resultados.titulo}</h2>
-                <img className='item-imagen' src={resultados.imagen} alt= {resultados.titulo}/>
-                <p className='item-descripcion'>{resultados.descripcion}</p>
-                <p className='item-precio'>$ {resultados.precio}</p>
-                <p className='item-stock'> {resultados.stock} </p>
-            </div>
+            <div>
+                <h2 className='item-titulo1'>{resultados.titulo}</h2>
+                <div className='detail-container1'>
+                    <img className='item-imagen1' src={resultados.image} alt= {resultados.title}/>
+                    <div className='item-aside1'>
+                        <p className='item-descripcion1'>{resultados.description}</p>
+                        <p className='item-precio1'>$ {resultados.price}</p>
+                        <p className='item-stock1'> {"Stock= 20"} </p>
+                        {unidadProducto ? (
+                            <ItemCount 
+                            stock={20}
+                            onAdd = {(cantidad) => {
+                            alert(`Agregaste ${cantidad} unidades`);
+                            setUnidadProducuto(false)
+                            }}
+                            />   
+                        ) : (<Link to='/Cart/5' className='boton-compra1 btn btn-primary item-boton1'> Ir al Checkout </Link>)}           
+                    </div>
+                </div>
+            </div>    
         )}
         </div>
        
