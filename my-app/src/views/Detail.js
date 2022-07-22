@@ -12,7 +12,7 @@ function Detail ({onAdd}) {
     let params = useParams();
     const [resultados, setResultados] = useState()
     const [err, setErr] = useState("")
-    const [unidadProducto, setUnidadProducuto] = useState(true)
+    const [unidadProducto, setUnidadProdcuto] = useState(true)
 
 
 
@@ -42,7 +42,7 @@ function Detail ({onAdd}) {
                             stock={20}
                             onAdd = {(cantidad) => {
                             alert(`Agregaste ${cantidad} unidades`);
-                            setUnidadProducuto(false)
+                            setUnidadProdcuto(false)
                             }}
                             />   
                         ) : (<Link to='/Cart/5' className='boton-compra1 btn btn-primary item-boton1'> Ir al Checkout </Link>)}           
