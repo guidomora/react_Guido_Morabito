@@ -3,9 +3,12 @@ import CarWidget from './CartWidget';
 import '../estilos/NavBar.css';
 import { Link } from 'react-router-dom';
 
-function NavBar () {
+function NavBar (props) {
     return <div className='sombra'>
-        <nav>
+        <nav className='nav-container'>
+            <Link to="/">
+                {<img src={require(`../multimedia2/${props.imagen}.png`)} className='imagen-home' /> }
+            </Link>
             <ul className="flex">
                 <li className="lista-nav">
                     <button type="button" className="btn btn-primary lista-boton">

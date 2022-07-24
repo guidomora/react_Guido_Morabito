@@ -9,7 +9,8 @@ import Footer from "./componente/Footer";
 function App() {
   return (
     <div>
-      <NavBar />
+      <NavBar 
+        imagen ='LogoReact' />
       <ItemListContainer />
       <Footer />
     </div>

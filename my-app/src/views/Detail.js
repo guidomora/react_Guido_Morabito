@@ -26,7 +26,8 @@ function Detail ({onAdd}) {
     return (
         <div>
             <div>
-                <NavBar />
+            <NavBar 
+            imagen ='LogoReact' />
             </div>
              {resultados && (
             <div>

@@ -10,7 +10,6 @@ import ArreglosFloralesViews from './views/ArreglosFloralesViews';
 import RamosDeFloresViews from './views/RamosDeFloresViews';
 import CartViews from './views/CartViews';
 import Detail from './views/Detail';
-import CarWidget from './componente/CartWidget';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

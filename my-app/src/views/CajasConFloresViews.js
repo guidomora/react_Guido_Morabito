@@ -24,7 +24,8 @@ function CajasConFloresViews() {
     return (
         <div>
             <div>
-                <NavBar />
+            <NavBar 
+             imagen ='LogoReact' />
             </div>
             <div className='ItemList'>
             {carga ? (
