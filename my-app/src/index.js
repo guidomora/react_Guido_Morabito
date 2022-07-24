@@ -10,21 +10,24 @@ import ArreglosFloralesViews from './views/ArreglosFloralesViews';
 import RamosDeFloresViews from './views/RamosDeFloresViews';
 import CartViews from './views/CartViews';
 import Detail from './views/Detail';
+import { CartProvider } from './componente/CartContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />}/>
-        <Route path="productos/:id" element={<Detail />} />
-        <Route path="/CajasConFlores/1" element={<CajasConFloresViews />} />
-        <Route path="/Condolencias/2" element={<CondolenciasViews />} />
-        <Route path="/ArreglosFlorales/3" element={<ArreglosFloralesViews/>} />
-        <Route path="/RamosDeFlores/4" element={<RamosDeFloresViews />} />
-        <Route path="/Cart/5" element={<CartViews />} />
-      </Routes>
-    </BrowserRouter>
+    <CartProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<App />}/>
+          <Route path="productos/:id" element={<Detail />} />
+          <Route path="/CajasConFlores/1" element={<CajasConFloresViews />} />
+          <Route path="/Condolencias/2" element={<CondolenciasViews />} />
+          <Route path="/ArreglosFlorales/3" element={<ArreglosFloralesViews/>} />
+          <Route path="/RamosDeFlores/4" element={<RamosDeFloresViews />} />
+          <Route path="/Cart/5" element={<CartViews />} />
+        </Routes>
+      </BrowserRouter>
+    </CartProvider>  
   </React.StrictMode>
 );
 

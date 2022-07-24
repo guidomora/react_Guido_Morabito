@@ -7,7 +7,7 @@ function NavBar (props) {
     return <div className='sombra'>
         <nav className='nav-container'>
             <Link to="/">
-                {<img src={require(`../multimedia2/${props.imagen}.png`)} className='imagen-home' /> }
+                <img src={require(`../multimedia2/${props.imagen}.png`)} className='imagen-home' /> 
             </Link>
             <ul className="flex">
                 <li className="lista-nav">
