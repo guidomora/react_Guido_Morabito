@@ -1,9 +1,10 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useState, useContext} from "react";
 import {useParams} from 'react-router-dom';
 import { Link } from "react-router-dom";
 import '../estilos/ItemDetail.css'
 import NavBar from "../componente/NavBar";
 import ItemCount from '../componente/ItemCount';
+import { CartContext } from "../componente/CartContext";
 
 
 
