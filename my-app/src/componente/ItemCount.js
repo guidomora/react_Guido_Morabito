@@ -8,7 +8,7 @@ function Contador ({stock, onAdd}) {
     const showListCart = (evento) => {
     setMostrarCarrito(true)
 }
-    const CartContextValue = useContext(CartContext)
+    
 
     function Restar () {
         setValor( preValor => (preValor > 0 ? valor - 1 : valor)); 
@@ -38,7 +38,7 @@ function Contador ({stock, onAdd}) {
             } else{
                 alert("No contamos con esa cantidad de productos")
             }
-        }}>Agregar al carrito</button>)}
+        }}>Agregar al carrito </button>)}
         </div>
     )
 }; 

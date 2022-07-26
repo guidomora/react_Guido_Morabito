@@ -1,53 +1,56 @@
-import { createContext, useState } from "react";
-import Item from "./Item";
+import React from "react";
+import { createContext, useState, useContext } from "react";
 
-export const CartContext = createContext();
+ const CartContext = createContext({});
 
-export const CartProvider = ({children, defaultValue}) => {
+export const CartProvider = ({children}) => {
+
+    const [items, setItems] = useState([]);
+
+    const clearCart = () => {
+        setItems([]);
+    };
     
-    const [carrito, setCarrito] = useState([]);
-
-    const estaEnCarrito = (productoId) => {
-        const existe = carrito.find(element => element.id === productoId)
-        return existe
-    };
-
-    const sumaItems = carrito.map(products => products.cantidad).reduce((anterior, actual) => anterior + actual, 0)
-    const sumaPrecio = carrito.map(products => products.price * products.cantidad).reduce((anterior, actual) => anterior + actual, 0)
-
-    const addProducto = (product) => {
-        const existe = estaEnCarrito(product.id)
-        if (!existe) {
-            setCarrito([...carrito, product])
+    const estaEnCarrito = (id) => {
+        if (items.find(i => i.id == id)){
+            return true 
         } else {
-            const index = carrito.findIndex(x => x.id === product.id)
-            const carrito1 = carrito.slice()
-            carrito1[index].quantity = carrito1[index].quantity+ product.quantity
-            setCarrito(carrito1)
-            alert("El producto ya está agregado en el Cart. Se suman las cantidades")
-        };
-    }
-
-    const borrarProducto = (id) => {
-        const items1 = carrito.filter(element => element.id !== id);
-        setCarrito(items1);
+            return false
+        }
     };
 
-    const borrarTodo = () => {
-        setCarrito([])
+    const removeItem = (id) =>{
+        const borrarItem = items.filter(item => item.id !== id)
+        setItems(borrarItem)
     };
 
-    const data = {
-        carrito,
-        addProducto,
-        estaEnCarrito,
-        sumaItems,
-        sumaPrecio,
-        borrarProducto,
-        borrarTodo
+    const addItem = ({id, title, price, cantidad}) => {
+        if (! estaEnCarrito(id)) {
+            const agregarCarrito = items.concat({id, title, price, cantidad})
+            setItems(agregarCarrito)
+        } else {
+            const index = items.findIndex(x => x.id === id)
+            const cart_ = items.slice()
+            cart_[index].cantidad = cart_[index].cantidad + cantidad
+            setItems(cart_)
+        }
     };
 
-    return <CartContext.Provider value={data}>
+    return (<CartContext.Provider value={{
+        carrito: items,
+        addItem,
+        removeItem,
+        clearCart,
+        estaEnCarrito
+    }}>
         {children}
     </CartContext.Provider>
+    )
 };
+
+export const useCartContext = () =>{
+    const CartProvider = useContext(CartContext)
+    return CartProvider
+};
+
+export default CartContext;
