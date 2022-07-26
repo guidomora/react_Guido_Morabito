@@ -1,13 +1,14 @@
-import React, {useState} from "react";
+import React, {useState, useContext} from "react";
 import '../estilos/ItemCount.css';
+import { CartContext } from "./CartContext"; 
 
 function Contador ({stock, onAdd}) {
     const [valor, setValor] = useState(0);
-
     const [mostrarCarrito, setMostrarCarrito] = useState(false)
     const showListCart = (evento) => {
     setMostrarCarrito(true)
 }
+    const CartContextValue = useContext(CartContext)
 
     function Restar () {
         setValor( preValor => (preValor > 0 ? valor - 1 : valor)); 
@@ -30,7 +31,7 @@ function Contador ({stock, onAdd}) {
             </div>
             <div>  
             </div>
-            {showListCart && (
+            {showListCart && ( 
         <button className='boton-compra1 btn btn-primary boton-agregado' onClick={ () => {
             if (valor <= stock){
                 onAdd(valor);
@@ -42,6 +43,6 @@ function Contador ({stock, onAdd}) {
     )
 }; 
 
-<button > Agregar al Carrito </button>
+
 
 export default Contador;

@@ -27,7 +27,7 @@ root.render(
           <Route path="/Cart/5" element={<CartViews />} />
         </Routes>
       </BrowserRouter>
-    </CartProvider>  
+    </CartProvider>    
   </React.StrictMode>
 );
 

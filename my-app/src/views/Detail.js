@@ -9,13 +9,21 @@ import { CartContext } from "../componente/CartContext";
 
 
 
-function Detail ({onAdd}) {
+function Detail ({products}) {
     let params = useParams();
     const [resultados, setResultados] = useState()
     const [err, setErr] = useState("")
     const [unidadProducto, setUnidadProdcuto] = useState(true)
+    const [estado, setEstado] = useState(false);
+    const {addProducto} = useContext(CartContext)
 
-
+    function onAddEvent(c) {
+        setEstado(true)
+        addProducto({...products, cantidad: c}); 
+    } 
+    
+ 
+    
 
     useEffect(() => {
         fetch("https://fakestoreapi.com/products/" + params.id)
@@ -40,14 +48,14 @@ function Detail ({onAdd}) {
                         <p className='item-precio1'>$ {resultados.price}</p>
                         <p className='item-stock1'> {"Stock= 20"} </p>
                         {unidadProducto ? (
-                            <ItemCount 
-                            stock={20}
-                            onAdd = {(cantidad) => {
-                            alert(`Agregaste ${cantidad} unidades`);
-                            setUnidadProdcuto(false)
-                            }}
-                            />   
-                        ) : (<Link to='/Cart/5' className='boton-compra1 btn btn-primary item-boton1'> Ir al Checkout </Link>)}           
+                                <ItemCount 
+                                stock={20}
+                                onAdd = {(cantidad) => {
+                                alert(`Agregaste ${cantidad} unidades`);
+                                setUnidadProdcuto(false)
+                                }}
+                                />    
+                        ) : (<Link to='/Cart/5' className='boton-compra1 btn btn-primary item-boton1'> Ir al Carrito </Link>)}           
                     </div>
                 </div>
             </div>    
