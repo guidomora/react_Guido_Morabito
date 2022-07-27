@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import "../estilos/ItemDetail.css";
@@ -26,6 +26,7 @@ function Detail() {
       id: resultados.id,
       title: resultados.title,
       price: resultados.price,
+      image: resultados.image,
       cantidad: c,
     });
     setUnidadProducto(false);

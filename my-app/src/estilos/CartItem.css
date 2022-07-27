@@ -1,0 +1,38 @@
+.contenedor-gral {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.carrito-contenedor{
+    height: 450px;
+    width: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.carrito-img {
+    height: 200px;
+    width: 200px;
+}
+
+.carrito-titulo{
+    font-size: 20px;
+    text-align: center;
+}
+
+.carrito-precio {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.carrito-cantidad {
+    font-weight: bold;
+    font-size: 20px;
+}

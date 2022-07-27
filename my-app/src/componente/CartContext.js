@@ -24,9 +24,9 @@ export const CartProvider = ({children}) => {
         setItems(borrarItem)
     };
 
-    const addItem = ({id, title, price, cantidad}) => {
+    const addItem = ({id, title, price, cantidad, image}) => {
         if (! estaEnCarrito(id)) {
-            const agregarCarrito = items.concat({id, title, price, cantidad})
+            const agregarCarrito = items.concat({id, title, price, cantidad, image})
             setItems(agregarCarrito)
         } else {
             const index = items.findIndex(x => x.id === id)
