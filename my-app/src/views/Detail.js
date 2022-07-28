@@ -5,6 +5,7 @@ import "../estilos/ItemDetail.css";
 import NavBar from "../componente/NavBar";
 import ItemCount from "../componente/ItemCount";
 import { useCartContext } from "../componente/CartContext";
+import Footer from '../componente/Footer';
 
 function Detail() {
   let params = useParams();
@@ -64,6 +65,7 @@ function Detail() {
           </div>
         </div>
       )}
+      <Footer />
     </div>
   );
 }

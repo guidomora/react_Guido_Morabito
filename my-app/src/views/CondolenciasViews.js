@@ -3,6 +3,7 @@ import Condolencias from "../componente/Condolencias";
 import NavBar from "../componente/NavBar";
 import productos from "../productos/productos.json";
 import "../estilos/ItemList.css";
+import Footer from "../componente/Footer";
 
 function CondolenciasViews() {
   const [resultados, setResultados] = useState([]);
@@ -30,7 +31,12 @@ function CondolenciasViews() {
       </div>
       <div className="ItemList">
         {carga ? (
-          <h2 className="carga"> Cargando productos... </h2>
+          <div className="spinner">
+            <h2 className="carga"> Cargando</h2>
+            <div class="spinner-border" role="status">
+              <span class="visually-hidden"></span>
+            </div>
+          </div>
         ) : (
           filtrado.map(({ id, titulo, descripcion, precio, imagen, stock }) => (
             <Condolencias
@@ -44,6 +50,7 @@ function CondolenciasViews() {
           ))
         )}
       </div>
+      <Footer />
     </div>
   );
 }

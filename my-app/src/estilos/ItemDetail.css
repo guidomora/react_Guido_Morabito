@@ -4,7 +4,7 @@
 }
 
 .item1 {
-    height: 500px;
+    height: 650px;
     width: 450px;
     background-color: white;
     display: flex;
@@ -69,5 +69,5 @@
 }
 
 .boton-compra1 {
-    margin: 20px;
+    margin: 5px;
 }

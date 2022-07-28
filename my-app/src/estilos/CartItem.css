@@ -1,4 +1,5 @@
 .contenedor-gral {
+    height: 100%;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -15,6 +16,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 3px 13px 1px rgb(0 0 0 / 10%);
+    margin: 10px;
 }
 
 .carrito-img {
@@ -35,4 +38,13 @@
 .carrito-cantidad {
     font-weight: bold;
     font-size: 20px;
+}
+
+.vaciar-carrito {
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

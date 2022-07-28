@@ -19,6 +19,7 @@ export const CartProvider = ({children}) => {
         }
     };
 
+
     const removeItem = (id) =>{
         const borrarItem = items.filter(item => item.id !== id)
         setItems(borrarItem)
