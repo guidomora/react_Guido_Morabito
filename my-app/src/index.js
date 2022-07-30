@@ -11,6 +11,8 @@ import RamosDeFloresViews from './views/RamosDeFloresViews';
 import CartViews from './views/CartViews';
 import Detail from './views/Detail';
 import { CartProvider } from './componente/CartContext';
+import './hooks/FireBase.js';
+import ItemListContainer from './componente/ItemListContainer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -25,6 +27,7 @@ root.render(
           <Route path="/ArreglosFlorales/3" element={<ArreglosFloralesViews/>} />
           <Route path="/RamosDeFlores/4" element={<RamosDeFloresViews />} />
           <Route path="/Cart/5" element={<CartViews />} />
+          <Route path="/category/:categoryId" element={<ItemListContainer />} />
         </Routes>
       </BrowserRouter>
     </CartProvider>    
