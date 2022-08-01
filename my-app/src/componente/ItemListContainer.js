@@ -1,27 +1,57 @@
 import React, { useState, useEffect } from "react";
 import "../estilos/ItemListContainer.css";
 import ItemList from "./ItemList";
-import productos from "../productos/productos.json";
+//import productos from "../productos/productos.json";
 import { useParams } from "react-router-dom";
+import {getProductos} from '../hooks/FireBase';
 
 function ItemListContainer() {
   const [carga, setCarga] = useState(true);
+  const [productos, setProductos] = useState([]);
+  console.log("categoriaId:", categoriaId);
 
-  const {categoryId} = useParams()
+  const {categoriaId} = useParams()
 
-  useEffect(() => {
-    const promesa = new Promise((resolve, reject) => {
-      resolve(productos);
-      console.log(productos)
+  // useEffect(() => {
+  //   const promesa = new Promise((resolve, reject) => {
+  //     resolve(productos);
+  //     console.log(productos)
+  //   });
+  //   promesa
+  //     .then(function resuelto() {
+  //       setTimeout(setCarga, 2000, false);
+  //     })
+  //     .catch(function rechazado() {
+  //       console.log("no carga");
+  //     });
+  // }, []);
+
+  useEffect (() => {
+    getProductos(categoriaId)
+    .then((snapshot) => {
+      setProductos(
+        snapshot.docs.map((doc) => {
+          return { ...doc.data(), id: doc.id };
+        })
+      );
+    })
+    .catch((err) => {
+      console.log(err);
+      alert("An error occurred while fetching products");
     });
-    promesa
-      .then(function resuelto() {
-        setTimeout(setCarga, 2000, false);
-      })
-      .catch(function rechazado() {
-        console.log("no carga");
-      });
-  }, []);
+}, [categoriaId]);
+    //     const promesa = new Promise((resolve, reject) => {
+    //   resolve();
+    //   console.log()
+    // });
+    // promesa
+    //   .then(function resuelto() {
+    //     setTimeout(setCarga, 2000, false);
+    //   })
+    //   .catch(function rechazado() {
+    //     console.log("no carga");
+    //   });
+  
 
   return (
     <div>
@@ -34,7 +64,7 @@ function ItemListContainer() {
         </div>
       ) : (
         <>
-          <ItemList Items={productos} />
+          <ItemList Items={""} />
         </>
       )}
     </div>

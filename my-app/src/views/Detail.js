@@ -70,4 +70,16 @@ function Detail() {
   );
 }
 
+
+// snp.docs.map((document) => ({
+//   id: document.id,
+//   ...document.data(),
+// }));
+
+// fetch("https://fakestoreapi.com/products/" + params.id)
+//       .then((res) => res.json())
+//       .then((resultados) => setResultados(resultados))
+//       .catch(() => setErr(err));
+//   }, [params.id]);
+
 export default Detail;
