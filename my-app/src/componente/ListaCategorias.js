@@ -1,10 +1,20 @@
-import React from "react";
-import {Link} from 'react-router-dom';
+import React from 'react';
+import { Link } from "react-router-dom"; 
 
-function ListaCategorias ({items}) {
+const ListCategorias = ({ items }) => {
     return (
-        <div></div> 
-    )
-};
+        <div>{items.length ? (
+            items.map((item) =>  (
+               <div >
+                   <Link to={"../productos/categoria/" + item.titulo}>{item.titulo}</Link>
+               </div>
+            )
 
-export default ListaCategorias;
+            )
+        ) : (
+            <h3>No Hay Resultados</h3>
+        )}
+        </div>
+    );
+};
+export default ListCategorias;

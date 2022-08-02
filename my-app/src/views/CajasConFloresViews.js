@@ -24,9 +24,6 @@ function CajasConFloresViews() {
 
   return (
     <div>
-      <div>
-        <NavBar imagen="LogoReact" />
-      </div>
       <div className="ItemList">
         {carga ? (
           <div className="spinner">
@@ -48,7 +45,6 @@ function CajasConFloresViews() {
           ))
         )}
       </div>
-      <Footer />
     </div>
   );
 }

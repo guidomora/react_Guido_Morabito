@@ -1,6 +1,4 @@
 import React from "react";
-import Footer from "../componente/Footer";
-import NavBar from "../componente/NavBar";
 import CartContext, { useCartContext } from "../componente/CartContext";
 import CartItem from "../componente/CartItem";
 import "../estilos/CartItem.css";
@@ -12,7 +10,6 @@ function Cart() {
     <CartContext.Consumer>
       {({ carrito: items }) => (
         <div>
-          <NavBar imagen="LogoReact" />
           <div className="contenedor-gral">
             {items.length ? (
               items.map((element) => (

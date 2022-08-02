@@ -22,28 +22,36 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 
-
-export const getProd = (categoriaId) => {
-  if (categoriaId){getProductosPorCategoria(categoriaId)
-  } else return getProductos
-};
-
 export const getProductos = () => {
   const productosList = collection(db, "items");
   const q = query(productosList);
-  return getDocs(q)
-};
-
-
-export const getProductosPorCategoria = (categoriaId) => {
-  const catRef = collection(db, "items");
-  const q = query(catRef, where("tipo", "==", categoriaId));
   return getDocs(q);
 };
 
+export const getProducts = async (categoryId) => {
+  if (categoryId) {
+    return await getProductosPorCategoria(categoryId);
+  } else {
+    return await getProductos();
+  }
+};
 
+export const getProductosPorCategoria = async (categoryId) => {
+  if (!categoryId) throw new Error("Missing categoriaId");
 
+  const productosList = collection(db, "items");
+  const q = query(productosList, where("tipo", "==", categoryId));
+  return await getDocs(q);
+};
 
-// getDoc(docsRef).then((snapshot)=>{
-//   console.log(snapshot.data())
-// })
+export const getDetail = async (productoId) => {
+  if (!productoId) throw new Error("Missing productId");
+
+  return (await getDoc(doc(db, "items", productoId))).data();
+};
+
+export const getAllCategories = async ()=>{
+  const categoriasCollection=collection(db,"categorias");
+  const q = query(categoriasCollection)
+  return await (getDocs(q))
+}

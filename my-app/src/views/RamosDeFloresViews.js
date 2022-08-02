@@ -24,15 +24,12 @@ function CajasConFloresViews() {
 
   return (
     <div>
-      <div>
-        <NavBar imagen="LogoReact" />
-      </div>
       <div className="ItemList">
         {carga ? (
           <div className="spinner">
             <h2 className="carga"> Cargando</h2>
-            <div class="spinner-border" role="status">
-              <span class="visually-hidden"></span>
+            <div className="spinner-border" role="status">
+              <span className="visually-hidden"></span>
             </div>
           </div>
         ) : (
@@ -48,7 +45,6 @@ function CajasConFloresViews() {
           ))
         )}
       </div>
-      <Footer />
     </div>
   );
 }
