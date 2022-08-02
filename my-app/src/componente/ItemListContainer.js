@@ -54,16 +54,7 @@ function ItemListContainer() {
 
   return (
     <div>
-      {/* {carga ? (
-        <div className="spinner">
-          <h2 className="carga"> Cargando</h2>
-          <div className="spinner-border" role="status">
-            <span className="visually-hidden"></span>
-          </div>
-        </div>
-      ) : ( */}
         <ItemList Items={productos} />
-      {/* )} */}
     </div>
   );
 }

@@ -1,28 +1,41 @@
 import React, { useState, useEffect } from "react";
+import ItemList from "../componente/ItemList";
 import { useParams } from "react-router-dom";
-
-import { getProducts, getAllCategories } from "../hooks/FireBase";
+import { getProductos, getItemsFiltrados } from "../hooks/FireBase";
 
 const Categorias = () => {
-  const [categorias, setCategorias] = useState([]);
-  const [err, setErr] = useState("");
+  let { nombreCategoria } = useParams();
+  const [loading, setLoading] = useState(true);
+  const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    getAllCategories()
-      .then((snapshot) => {
-        setCategorias(
-          snapshot.docs.map((docu) => {
-            return {
-              id: docu.id,
-              ...docu.data(),
-            };
-          })
-        );
-      })
-      .catch(() => setErr("Ocurrio un error"));
-  }, []);
+    (nombreCategoria === undefined
+      ? getProductos()
+      : getItemsFiltrados(nombreCategoria)
+    ).then((snapshot) => {
+      setProducts(
+        snapshot.docs.map((document) => ({
+          ...document.data(),
+        }))
+      );
+      setTimeout(setLoading, 2000, false);
+    });
+  }, [nombreCategoria]);
 
-  return <div>hola</div>;
+  return (
+    <div>
+      {loading ? (
+        <div className="spinner">
+          <h2 className="carga"> Cargando</h2>
+          <div className="spinner-border" role="status">
+            <span className="visually-hidden"></span>
+          </div>
+        </div>
+      ) : (
+        <ItemList Items={products} />
+      )}
+    </div>
+  );
 };
 
 export default Categorias;

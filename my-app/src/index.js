@@ -4,16 +4,13 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import CajasConFloresViews from "./views/CajasConFloresViews";
-import CondolenciasViews from "./views/CondolenciasViews";
-import ArreglosFloralesViews from "./views/ArreglosFloralesViews";
-import RamosDeFloresViews from "./views/RamosDeFloresViews";
 import CartViews from "./views/CartViews";
 import Detail from "./views/Detail";
 import { CartProvider } from "./componente/CartContext";
 import "./hooks/FireBase.js";
 import Home from "./componente/ItemListContainer";
 import Categorias from "./views/Categorias";
+import ItemListContainer from "./componente/ItemListContainer";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -22,17 +19,13 @@ root.render(
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<App />}>
-            <Route index element={<Home />}/>
+            <Route index element={<Home />} />
             <Route path="/items/:id" element={<Detail />} />
-            <Route path="/CajasConFlores/" element={<CajasConFloresViews />} />
-            <Route path="/Condolencias/" element={<CondolenciasViews />} />
-            <Route
-              path="/ArreglosFlorales/3"
-              element={<ArreglosFloralesViews />}
-            />
-            <Route path="/RamosDeFlores/" element={<RamosDeFloresViews />} />
             <Route path="/Cart/" element={<CartViews />} />
-            <Route path="/tipo/:categoriaId" element={<Categorias />} />
+            <Route path="/tipo/:nombreCategoria" element={<Categorias />}>
+              <Route path="/tipo/:nombreCategoria/items/:id" element={<Detail />} />
+            </Route>
+            
           </Route>
         </Routes>
       </BrowserRouter>

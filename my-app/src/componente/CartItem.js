@@ -1,8 +1,9 @@
 import React from "react";
 import { useCartContext } from "./CartContext";
 import '../estilos/CartItem.css'
+import '../hooks/FireBase';
 
-const CartItem = ({ id, title, price, cantidad, image }) => {
+const CartItem = ({ id, titulo, precio, cantidad, imagen }) => {
   const { removeItem } = useCartContext();
 
   const borrar = () => {
@@ -11,9 +12,9 @@ const CartItem = ({ id, title, price, cantidad, image }) => {
 
   return (
     <div className='carrito-contenedor'>
-      <img src={image} className='carrito-img' alt={title}/>
-      <h3 className='carrito-titulo'>{title}</h3>
-      <p className='carrito-precio'>$ {price}</p>
+      <img src={imagen} className='carrito-img' alt={titulo}/>
+      <h3 className='carrito-titulo'>{titulo}</h3>
+      <p className='carrito-precio'>$ {precio}</p>
       <p className='carrito-cantidad'>cantidad: {cantidad}</p>
       <button onClick={borrar} className=' btn btn-primary'>Eliminar</button>
     </div>

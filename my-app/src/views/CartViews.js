@@ -2,6 +2,7 @@ import React from "react";
 import CartContext, { useCartContext } from "../componente/CartContext";
 import CartItem from "../componente/CartItem";
 import "../estilos/CartItem.css";
+import '../hooks/FireBase';
 
 function Cart() {
   const { clearCart } = useCartContext();
@@ -16,10 +17,10 @@ function Cart() {
                 <div>
                   <CartItem
                     id={element.id}
-                    title={element.title}
-                    price={element.price}
+                    titulo={element.titulo}
+                    precio={element.precio}
                     cantidad={element.cantidad}
-                    image={element.image}
+                    imagen={element.imagen}
                   />
                 </div>
               ))
@@ -32,7 +33,6 @@ function Cart() {
               Vaciar Carrito
             </button>
           </div>
-          {/* <p>Total: $</p> */}
         </div>
       )}
     </CartContext.Consumer>

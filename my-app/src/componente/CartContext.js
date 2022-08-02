@@ -1,5 +1,6 @@
 import React from "react";
 import { createContext, useState, useContext } from "react";
+import '../hooks/FireBase';
 
  const CartContext = createContext({});
 
@@ -25,9 +26,9 @@ export const CartProvider = ({children}) => {
         setItems(borrarItem)
     };
 
-    const addItem = ({id, title, price, cantidad, image}) => {
+    const addItem = ({id, titulo, precio, cantidad, imagen}) => {
         if (! estaEnCarrito(id)) {
-            const agregarCarrito = items.concat({id, title, price, cantidad, image})
+            const agregarCarrito = items.concat({id, titulo, precio, cantidad, imagen})
             setItems(agregarCarrito)
         } else {
             const index = items.findIndex(x => x.id === id)

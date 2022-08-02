@@ -7,36 +7,29 @@ import { useCartContext } from "../componente/CartContext";
 import { getDetail } from "../hooks/FireBase";
 
 function Detail() {
-   let params = useParams();
+  let params = useParams();
   const [resultados, setResultados] = useState([]);
-  const [item, setItem] = useState();
   const [unidadProducto, setUnidadProducto] = useState();
   const { addItem } = useCartContext();
-  const { id } = useParams();
 
   useEffect(() => {
-    getDetail(params.id).then((resultado) => {setResultados(resultado)
-    console.log(resultado)})
-    .catch((error) => {
-      console.log('error')
-    })
+    getDetail(params.id)
+      .then((resultado) => {
+        setResultados(resultado);
+        console.log(resultado);
+      })
+      .catch((error) => {
+        console.log("error");
+      });
   }, [params.id]);
-
-  // useEffect(() => {
-
-  
-  // fetch("https://fakestoreapi.com/products/" + params.id)
-  //     .then((res) => res.json())
-  //     .then((resultados) => setResultados(resultados))
-  // }, [params.id]);
 
   const onAdd = (c) => {
     alert(`Agregaste ${c} unidades`);
     addItem({
       id: resultados.id,
-      title: resultados.title,
-      price: resultados.price,
-      image: resultados.image,
+      title: resultados.titulo,
+      price: resultados.precio,
+      image: resultados.imagen,
       cantidad: c,
     });
     setUnidadProducto(false);
@@ -56,10 +49,10 @@ function Detail() {
             <div className="item-aside1">
               <p className="item-descripcion1">{resultados.descripcion}</p>
               <p className="item-precio1">$ {resultados.precio}</p>
-              <p className="item-stock1"> {'Stock: ' + resultados.stock} </p>
-              {unidadProducto && <ItemCount stock={20} onAdd={onAdd} />}
+              <p className="item-stock1"> {"Stock: " + resultados.stock} </p>
+              <ItemCount stock={20} onAdd={onAdd}/>
               <Link
-                to="/Cart/5"
+                to="/Cart/"
                 className="boton-compra1 btn btn-primary item-boton1"
               >
                 {" "}
@@ -72,12 +65,5 @@ function Detail() {
     </div>
   );
 }
-
-// snp.docs.map((document) => ({
-//   id: document.id,
-//   ...document.data(),
-// }));
-
-
 
 export default Detail;

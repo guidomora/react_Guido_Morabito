@@ -1,6 +1,6 @@
-import React, {useState, useContext} from "react";
+import React, {useState} from "react";
 import '../estilos/ItemCount.css';
-import { CartContext } from "./CartContext"; 
+
 
 function Contador ({stock, onAdd}) {
     const [valor, setValor] = useState(0);

@@ -50,8 +50,8 @@ export const getDetail = async (productoId) => {
   return (await getDoc(doc(db, "items", productoId))).data();
 };
 
-export const getAllCategories = async ()=>{
-  const categoriasCollection=collection(db,"categorias");
-  const q = query(categoriasCollection)
-  return await (getDocs(q))
-}
+export const getItemsFiltrados = (categoria) => {
+  const colRef = query(collection(db, "items"))
+  const q = query(colRef, where("tipo", "==", categoria));
+  return getDocs(q);
+};
