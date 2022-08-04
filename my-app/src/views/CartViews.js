@@ -2,10 +2,10 @@ import React from "react";
 import CartContext, { useCartContext } from "../componente/CartContext";
 import CartItem from "../componente/CartItem";
 import "../estilos/CartItem.css";
-import '../hooks/FireBase';
+import "../hooks/FireBase";
 
 function Cart() {
-  const { clearCart } = useCartContext();
+  const { clearCart, precioFinal } = useCartContext();
 
   return (
     <CartContext.Consumer>
@@ -23,12 +23,15 @@ function Cart() {
                     imagen={element.imagen}
                   />
                 </div>
-              ))
+              ), console.log(items))
             ) : (
               <h3> Carrito vacio</h3>
             )}
           </div>
-          <div className='vaciar-carrito'>
+          <div>
+            <p>${items.length ? "$" + precioFinal() : ""}</p>
+          </div>
+          <div className="vaciar-carrito">
             <button onClick={clearCart} className="btn btn-primary ">
               Vaciar Carrito
             </button>

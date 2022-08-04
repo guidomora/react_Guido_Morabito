@@ -38,12 +38,36 @@ export const CartProvider = ({children}) => {
         }
     };
 
+
+    const contadorCarrito = () => {
+        if (items.length === 1) {
+          return items[0].cantidad;
+        }
+        {
+          const _items = items.map((item) => item.cantidad).reduce((a, b) => a + b);
+          return _items;
+        }
+      };
+      const precioFinal = () => {
+        if (items.length === 1) {
+          return items[0].precio * items[0].cantidad;
+        }
+        {
+          const cant = items.map((item) => item.cantidad);
+          const precios = items.map((item) => item.precio);
+          const _items = cant.map((i,index) => cant[index] * precios[index]).reduce((a,b)=>a+b);      
+          return _items;
+        }
+    };    
+
     return (<CartContext.Provider value={{
         carrito: items,
         addItem,
         removeItem,
         clearCart,
-        estaEnCarrito
+        estaEnCarrito,
+        contadorCarrito,
+        precioFinal,
     }}>
         {children}
     </CartContext.Provider>

@@ -10,7 +10,7 @@ import { CartProvider } from "./componente/CartContext";
 import "./hooks/FireBase.js";
 import Home from "./componente/ItemListContainer";
 import Categorias from "./views/Categorias";
-import ItemListContainer from "./componente/ItemListContainer";
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -23,9 +23,8 @@ root.render(
             <Route path="/items/:id" element={<Detail />} />
             <Route path="/Cart/" element={<CartViews />} />
             <Route path="/tipo/:nombreCategoria" element={<Categorias />}>
-              <Route path="/tipo/:nombreCategoria/items/:id" element={<Detail />} />
+              <Route path="/tipo/:nombreCategoria/items/" element={<Detail />} />
             </Route>
-            
           </Route>
         </Routes>
       </BrowserRouter>
