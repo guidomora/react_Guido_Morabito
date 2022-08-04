@@ -17,7 +17,6 @@ function Contador ({stock, onAdd}) {
     function Sumar () {
         setValor( preValor => preValor + 1);
     };
-
     return (
         <div className='container-count'>
             <div className='ver-clics'>

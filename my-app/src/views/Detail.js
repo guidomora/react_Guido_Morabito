@@ -11,7 +11,7 @@ function Detail() {
   const [resultados, setResultados] = useState([]);
   const [unidadProducto, setUnidadProducto] = useState();
   const { addItem } = useCartContext();
-
+  
   useEffect(() => {
     getDetail(params.id)
       .then((resultado) => {
