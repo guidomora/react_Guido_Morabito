@@ -5,6 +5,7 @@ import '../hooks/FireBase';
 
 const CartItem = ({ id, titulo, precio, cantidad, imagen }) => {
   const { removeItem } = useCartContext();
+  console.log(titulo)
 
   const borrar = () => {
     removeItem(id);

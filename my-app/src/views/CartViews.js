@@ -25,7 +25,6 @@ function Cart() {
                     />
                   </div>
                 ),
-                console.log(items)
               )
             ) : (
               <h3> Carrito vacio</h3>
