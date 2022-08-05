@@ -28,22 +28,6 @@ export const getProductos = () => {
   return getDocs(q);
 };
 
-export const getProducts = async (categoryId) => {
-  if (categoryId) {
-    return await getProductosPorCategoria(categoryId);
-  } else {
-    return await getProductos();
-  }
-};
-
-export const getProductosPorCategoria = async (categoryId) => {
-  if (!categoryId) throw new Error("Missing categoriaId");
-
-  const productosList = collection(db, "items");
-  const q = query(productosList, where("tipo", "==", categoryId));
-  return await getDocs(q);
-};
-
 export const getDetail = async (productoId) => {
   if (!productoId) throw new Error("Missing productId");
 

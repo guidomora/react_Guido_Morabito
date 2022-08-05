@@ -11,7 +11,9 @@ function Detail() {
   const [resultados, setResultados] = useState([]);
   const [unidadProducto, setUnidadProducto] = useState();
   const { addItem } = useCartContext();
-  
+  console.log(params.id)
+
+
   useEffect(() => {
     getDetail(params.id)
       .then((resultado) => {
@@ -26,10 +28,10 @@ function Detail() {
   const onAdd = (c) => {
     alert(`Agregaste ${c} unidades`);
     addItem({
-      id: resultados.id,
-      title: resultados.titulo,
-      price: resultados.precio,
-      image: resultados.imagen,
+      id: params.id,
+      title: params.titulo,
+      price: params.precio,
+      image: params.imagen,
       cantidad: c,
     });
     setUnidadProducto(false);
