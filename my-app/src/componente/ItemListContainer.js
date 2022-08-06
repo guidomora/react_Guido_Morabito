@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../estilos/ItemListContainer.css";
 import ItemList from "./ItemList";
-import { getProductos } from "../hooks/FireBase";
+import { getProductos } from "../Firebase/FireBase";
 
 function ItemListContainer() {
   const [carga, setCarga] = useState(true);

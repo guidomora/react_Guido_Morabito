@@ -2,11 +2,11 @@ import React from "react";
 import CartContext, { useCartContext } from "../componente/CartContext";
 import CartItem from "../componente/CartItem";
 import "../estilos/CartItem.css";
-import "../hooks/FireBase";
+import "../Firebase/FireBase";
 
 function Cart() {
   const { clearCart, precioFinal } = useCartContext();
-
+  
   return (
     <CartContext.Consumer>
       {({ carrito: items }) => (
@@ -31,7 +31,7 @@ function Cart() {
             )}
           </div>
           <div>
-            <p>${items.length ? "$" + precioFinal() : ""}</p>
+            <p className="carrito-pTotal">{items.length ? "$" + precioFinal() : ""}</p>
           </div>
           <div className="vaciar-carrito">
             <button onClick={clearCart} className="btn btn-primary ">

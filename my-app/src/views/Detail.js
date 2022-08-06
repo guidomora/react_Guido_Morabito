@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "../estilos/ItemDetail.css";
 import ItemCount from "../componente/ItemCount";
 import { useCartContext } from "../componente/CartContext";
-import { getDetail } from "../hooks/FireBase";
+import { getDetail } from "../Firebase/FireBase";
 
 function Detail() {
   let params = useParams();
@@ -34,7 +34,7 @@ function Detail() {
       imagen: resultados.imagen,
       cantidad: c,
     });
-    setUnidadProducto(false);
+    setUnidadProducto(true);
   };
 
   return (

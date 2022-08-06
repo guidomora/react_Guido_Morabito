@@ -1,18 +1,17 @@
 import React from "react";
 import { useCartContext } from "./CartContext";
 import '../estilos/CartItem.css'
-import '../hooks/FireBase';
+import '../Firebase/FireBase';
 
 const CartItem = ({ id, titulo, precio, cantidad, imagen }) => {
   const { removeItem } = useCartContext();
-  console.log(titulo)
 
   const borrar = () => {
     removeItem(id);
   };
 
   return (
-    <div className='carrito-contenedor'>
+    <div className='carrito-contenedor' key={id}>
       <img src={imagen} className='carrito-img' alt={titulo}/>
       <h3 className='carrito-titulo'>{titulo}</h3>
       <p className='carrito-precio'>$ {precio}</p>

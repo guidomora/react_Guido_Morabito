@@ -35,6 +35,12 @@
     font-size: 20px;
 }
 
+.carrito-pTotal {
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
 .carrito-cantidad {
     font-weight: bold;
     font-size: 20px;
