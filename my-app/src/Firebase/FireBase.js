@@ -7,6 +7,7 @@ import {
   getFirestore,
   query,
   where,
+  addDoc,
 } from "firebase/firestore";
 
 const firebaseConfig = {
@@ -38,4 +39,11 @@ export const getItemsFiltrados = (categoria) => {
   const colRef = query(collection(db, "items"))
   const q = query(colRef, where("tipo", "==", categoria));
   return getDocs(q);
+};
+
+
+export const getCarrito = async (carrito) => {
+  const carRef = query(collection(db, "orders"))
+  const docRef = await addDoc(carRef,carrito)
+  return docRef.id
 };

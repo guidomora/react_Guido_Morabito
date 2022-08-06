@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-orden {
+    width: 95%;
+    height: 30vh;
+    box-shadow: 0 3px 13px 1px rgb(0 0 0 / 10%);
+    margin: 20px;
+}

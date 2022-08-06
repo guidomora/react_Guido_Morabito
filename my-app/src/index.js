@@ -10,6 +10,7 @@ import { CartProvider } from "./componente/CartContext";
 import "./Firebase/FireBase.js";
 import Home from "./componente/ItemListContainer";
 import Categorias from "./views/Categorias";
+import CheckOut from "./views/CheckOut";
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -25,6 +26,7 @@ root.render(
             <Route path="/tipo/:nombreCategoria" element={<Categorias />}>
               <Route path="/tipo/:nombreCategoria/items/" element={<Detail />} />
             </Route>
+            <Route path="/CheckOut/" element={<CheckOut />} />
           </Route>
         </Routes>
       </BrowserRouter>
