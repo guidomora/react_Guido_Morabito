@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ItemList from "../componente/ItemList";
 import { useParams } from "react-router-dom";
-import { getProductos, getItemsFiltrados } from "../hooks/FireBase";
+import { getProductos, getItemsFiltrados } from "../Firebase/FireBase";
 
 const Categorias = () => {
   let { nombreCategoria } = useParams();

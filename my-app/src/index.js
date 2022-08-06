@@ -7,7 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CartViews from "./views/CartViews";
 import Detail from "./views/Detail";
 import { CartProvider } from "./componente/CartContext";
-import "./hooks/FireBase.js";
+import "./Firebase/FireBase.js";
 import Home from "./componente/ItemListContainer";
 import Categorias from "./views/Categorias";
 
