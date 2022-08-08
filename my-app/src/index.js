@@ -21,12 +21,10 @@ root.render(
         <Routes>
           <Route path="/" element={<App />}>
             <Route index element={<Home />} />
-            <Route path="/items/:id" element={<Detail />} />
-            <Route path="/Cart/" element={<CartViews />} />
-            <Route path="/tipo/:nombreCategoria" element={<Categorias />}>
-              <Route path="/tipo/:nombreCategoria/items/" element={<Detail />} />
-            </Route>
-            <Route path="/CheckOut/" element={<CheckOut />} />
+            <Route path="items/:id" element={<Detail />} />
+            <Route path="Cart/" element={<CartViews />} />
+            <Route path="tipo/:nombreCategoria" element={<Categorias />}/>
+            <Route path="CheckOut/" element={<CheckOut />} />
           </Route>
         </Routes>
       </BrowserRouter>

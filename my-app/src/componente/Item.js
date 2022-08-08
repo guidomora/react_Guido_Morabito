@@ -17,7 +17,7 @@ function Item ({id, titulo, precio, imagen, stock}) {
             <p className='item-precio'>$ {precio}</p>
             <p className='item-stock'> {stock} </p>
             <span>
-                <Link to={"items/" + id} className='btn btn-primary item-boton'> Detalle del producto </Link>
+                <Link to={"/items/" + id} className='btn btn-primary item-boton'> Detalle del producto </Link>
             </span>
         </div>
     )

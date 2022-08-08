@@ -16,6 +16,7 @@ const Categorias = () => {
       setProducts(
         snapshot.docs.map((document) => ({
           ...document.data(),
+          id: document.id
         }))
       );
       setTimeout(setLoading, 2000, false);
