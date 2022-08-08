@@ -1,6 +1,6 @@
 import React from "react";
 import { createContext, useState, useContext } from "react";
-import '../Firebase/FireBase';
+import {getCarrito} from '../Firebase/FireBase';
 
  const CartContext = createContext({});
 

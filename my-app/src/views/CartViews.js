@@ -7,6 +7,7 @@ import {Link} from 'react-router-dom';
 
 function Cart() {
   const { clearCart, precioFinal } = useCartContext();
+
   
   return (
     <CartContext.Consumer>
@@ -26,7 +27,7 @@ function Cart() {
                     />
                   </div>
                 ),
-              )
+                console.log(items))
             ) : (
               <h3> Carrito vacio</h3>
             )}
@@ -38,47 +39,10 @@ function Cart() {
             <button onClick={clearCart} className="btn btn-primary vaciar-checkOut">
               Vaciar Carrito
             </button>
-            <button className="btn ">
+            {items.length ? ( <button className="btn ">
               <Link to='/CheckOut'className="btn btn-primary vaciar-checkOut"> Ir al checkout</Link>
-            </button>
-          </div>
-          <div>
-            <div className="input-group mb-3">
-              <span className="input-group-text" id="basic-addon1">
-                Nombre y apellido
-              </span>
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Username"
-                aria-label="Username"
-                aria-describedby="basic-addon1"
-              />
-            </div>
-
-            <div className="input-group mb-3">
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Recipient's username"
-                aria-label="Recipient's username"
-                aria-describedby="basic-addon2"
-              />
-              <span className="input-group-text" id="basic-addon2">
-                Mail
-              </span>
-            </div>
-            <div className="input-group mb-3">
-              <span className="input-group-text" id="basic-addon3">
-                Telefono
-              </span>
-              <input
-                type="text"
-                className="form-control"
-                id="basic-url"
-                aria-describedby="basic-addon3"
-              />
-            </div>
+            </button>): (<p></p>)}
+           
           </div>
         </div>
       )}
