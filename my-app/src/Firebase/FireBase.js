@@ -42,8 +42,9 @@ export const getItemsFiltrados = (categoria) => {
 };
 
 
-export const getCarrito = async (carrito) => {
-  const carRef = query(collection(db, "orders"))
-  const docRef = await addDoc(carRef,carrito)
-  return docRef.id
+
+export const crearOrden = async (items) => {
+  const colRef = collection(db, "orders");
+  const ordenRef = await addDoc(colRef, items);
+  return ordenRef.id;
 };
