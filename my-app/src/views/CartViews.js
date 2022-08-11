@@ -4,13 +4,15 @@ import CartItem from "../componente/CartItem";
 import "../estilos/CartItem.css";
 import "../Firebase/FireBase";
 import { Link } from "react-router-dom";
-import {useState} from 'react'
-
-
+import { useState } from "react";
 
 function Cart() {
   const { clearCart, precioFinal, crearOrdenContext } = useCartContext();
-  const [datosUsuario, setUserData] = useState({name: '', phone: '', mail: ''});
+  const [datosUsuario, setUserData] = useState({
+    name: "",
+    phone: "",
+    mail: "",
+  });
 
   return (
     <CartContext.Consumer>
@@ -92,16 +94,21 @@ function Cart() {
               </div>
             </div>
           </div>
-          {items.length ? (
-            <button className="btn" onClick={crearOrdenContext}>
-              <Link to="/CheckOut" className="btn btn-primary vaciar-checkOut">
-                {" "}
-                Ir al checkout
-              </Link>
-            </button>
-          ) : (
-            <p></p>
-          )}
+          <div className="btn-checkout">
+            {items.length ? (
+              <button className="btn" onClick={crearOrdenContext}>
+                <Link
+                  to="/CheckOut"
+                  className="btn btn-primary vaciar-checkOut"
+                >
+                  {" "}
+                  Ir al checkout
+                </Link>
+              </button>
+            ) : (
+              <p></p>
+            )}
+          </div>
         </div>
       )}
     </CartContext.Consumer>
