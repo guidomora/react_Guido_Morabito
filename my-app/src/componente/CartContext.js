@@ -1,75 +1,107 @@
 import React from "react";
 import { createContext, useState, useContext } from "react";
-import {crearOrden} from "../Firebase/FireBase";
+import { crearOrden } from "../Firebase/FireBase";
 
- const CartContext = createContext({});
+const CartContext = createContext({});
 
-export const CartProvider = ({children}) => {
+export const CartProvider = ({ children }) => {
+  const [items, setItems] = useState([]);
+  const [carritoId, setCarritoId] = useState();
 
-    const [items, setItems] = useState([]);
+  const clearCart = () => {
+    setItems([]);
+  };
 
-    const clearCart = () => {
-        setItems([]);
-    };
+  const estaEnCarrito = (id) => {
+    if (items.find((i) => i.id == id)) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
+  const removeItem = (id) => {
+    const borrarItem = items.filter((item) => item.id !== id);
+    setItems(borrarItem);
+  };
+
+  const addItem = ({ id, titulo, precio, cantidad, imagen }) => {
+    if (!estaEnCarrito(id)) {
+      const agregarCarrito = items.concat({
+        id,
+        titulo,
+        precio,
+        cantidad,
+        imagen,
+      });
+      setItems(agregarCarrito);
+    } else {
+      const index = items.findIndex((x) => x.id === id);
+      const cart_ = items.slice();
+      cart_[index].cantidad = cart_[index].cantidad + cantidad;
+      setItems(cart_);
+    }
+  };
+
+  const contadorCarrito = () => {
+    if (items.length === 1) {
+      return items[0].cantidad;
+    }
+    {
+      const _items = items.map((item) => item.cantidad).reduce((a, b) => a + b);
+      return _items;
+    }
+  };
+  const precioFinal = () => {
+    if (items.length === 1) {
+      return items[0].precio * items[0].cantidad;
+    }
+    {
+      const cant = items.map((item) => item.cantidad);
+      const precios = items.map((item) => item.precio);
+      const _items = cant
+        .map((i, index) => cant[index] * precios[index])
+        .reduce((a, b) => a + b);
+      return _items;
+    }
+  };
+
+  const crearOrdenContext = () => {
+    let totalAmount= 0
+    const orden ={  buyer : {
+      nombre: "jose lopez",
+      telefono: "phone number",
+      mail: "asdasdd@asdad.asd",
+    },
     
-    const estaEnCarrito = (id) => {
-        if (items.find(i => i.id == id)){
-            return true 
-        } else {
-            return false
-        }
-    };
-
-
-    const removeItem = (id) =>{
-        const borrarItem = items.filter(item => item.id !== id)
-        setItems(borrarItem)
-    };
-
-    const addItem = ({id, titulo, precio, cantidad, imagen}) => {
-        if (! estaEnCarrito(id)) {
-            const agregarCarrito = items.concat({id, titulo, precio, cantidad, imagen})
-            setItems(agregarCarrito)
-        } else {
-            const index = items.findIndex(x => x.id === id)
-            const cart_ = items.slice()
-            cart_[index].cantidad = cart_[index].cantidad + cantidad
-            setItems(cart_)
-        }
-    };
-
-
-    const contadorCarrito = () => {
-        if (items.length === 1) {
-          return items[0].cantidad;
-        }
-        {
-          const _items = items.map((item) => item.cantidad).reduce((a, b) => a + b);
-          return _items;
-        }
-      };
-      const precioFinal = () => {
-        if (items.length === 1) {
-          return items[0].precio * items[0].cantidad;
-        }
-        {
-          const cant = items.map((item) => item.cantidad);
-          const precios = items.map((item) => item.precio);
-          const _items = cant.map((i,index) => cant[index] * precios[index]).reduce((a,b)=>a+b);      
-          return _items;
-        }
-    }; 
+    productosCarrito:items.map(e => ({
+      id: e.id,
+      title: e.title,
+      price: e.price,
+      quantity: e.quantity
+    })),
     
+    total: items.map(e=>(e.quantity*e.price)).reduce((a,b) => a+b),
+    date: new Date()
     
-    const crearOrdenContext = (item) => {
-        const orden = {nombre: "", mail: "", telefono: "" }
-        const id = crearOrden(item)
-        console.log(id)
-        const ordenes_ = items.concat(orden);
-        setItems(ordenes_)
-    };
+    }    
 
-    return (<CartContext.Provider value={{
+
+    const idCarrito = crearOrdenContext(orden);
+    setCarritoId(idCarrito);
+  };
+
+  // const crearOrdenContext = (item) => {
+  //     const orden = {nombre: "", mail: "", telefono: "" }
+  //     const id = crearOrden(item)
+  //     console.log(id)
+  //     const ordenes_ = items.concat(orden);
+  //     setItems(ordenes_)
+  // };
+
+  return (
+    <CartContext.Provider
+      value={{
         carrito: items,
         addItem,
         removeItem,
@@ -78,15 +110,16 @@ export const CartProvider = ({children}) => {
         contadorCarrito,
         precioFinal,
         crearOrdenContext,
-    }}>
-        {children}
+      }}
+    >
+      {children}
     </CartContext.Provider>
-    )
+  );
 };
 
-export const useCartContext = () =>{
-    const CartProvider = useContext(CartContext)
-    return CartProvider
+export const useCartContext = () => {
+  const CartProvider = useContext(CartContext);
+  return CartProvider;
 };
 
 export default CartContext;

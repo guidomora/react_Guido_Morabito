@@ -22,7 +22,6 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-
 export const getProductos = () => {
   const productosList = collection(db, "items");
   const q = query(productosList);
@@ -36,15 +35,13 @@ export const getDetail = async (productoId) => {
 };
 
 export const getItemsFiltrados = (categoria) => {
-  const colRef = query(collection(db, "items"))
+  const colRef = query(collection(db, "items"));
   const q = query(colRef, where("tipo", "==", categoria));
   return getDocs(q);
 };
 
-
-
-export const crearOrden = async (items) => {
-  const colRef = collection(db, "orders");
-  const ordenRef = await addDoc(colRef, items);
-  return ordenRef.id;
+export const crearOrdenContext = async (orden) => {
+  const collectionRef = collection(db, "orders");
+  const docRef = await addDoc(collectionRef, orden);
+  return docRef.id;
 };
