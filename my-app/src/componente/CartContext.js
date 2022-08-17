@@ -66,22 +66,23 @@ export const CartProvider = ({ children }) => {
     }
   };
 
-  const crearOrdenContext = () => {
-    let totalAmount= 0
-    const orden ={  buyer : {
-      nombre: "jose lopez",
-      telefono: "phone number",
-      mail: "asdasdd@asdad.asd",
-    },
+  const crearOrdenContext = (nombre,mail,telefono) => {
+    console.log(nombre,mail,telefono)
+    let totalAmount=0
+   const orden ={  buyer : {
+    nombre: nombre,
+    telefono: telefono,
+    mail: mail,
+   },
     
     productosCarrito:items.map(e => ({
       id: e.id,
-      title: e.title,
-      price: e.price,
-      quantity: e.quantity
+      titulo: e.titulo,
+      precio: e.precio,
+      cantidad: e.cantidad
     })),
     
-    total: items.map(e=>(e.quantity*e.price)).reduce((a,b) => a+b),
+    total: items.map(e=>(e.cantidad*e.precio)).reduce((a,b) => a+b),
     date: new Date()
     
     }    
