@@ -92,13 +92,7 @@ export const CartProvider = ({ children }) => {
     setCarritoId(idCarrito);
   };
 
-  // const crearOrdenContext = (item) => {
-  //     const orden = {nombre: "", mail: "", telefono: "" }
-  //     const id = crearOrden(item)
-  //     console.log(id)
-  //     const ordenes_ = items.concat(orden);
-  //     setItems(ordenes_)
-  // };
+
 
   return (
     <CartContext.Provider
