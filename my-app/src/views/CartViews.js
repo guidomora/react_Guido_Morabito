@@ -8,11 +8,11 @@ import { useState } from "react";
 
 function Cart() {
   const { clearCart, precioFinal, crearOrdenContext } = useCartContext();
-  const [datosUsuario, setUserData] = useState({
-    name: "",
-    phone: "",
-    mail: "",
-  });
+  // const [datosUsuario, setUserData] = useState({
+  //   name: "",
+  //   phone: "",
+  //   mail: "",
+  // });
 
   return (
     <CartContext.Consumer>
@@ -63,7 +63,7 @@ function Cart() {
                   placeholder=" Nombre y apellido"
                   aria-label="Username"
                   aria-describedby="basic-addon1"
-                  defaultValue={datosUsuario.nombre}
+                  //defaultValue={datosUsuario.nombre}
                 />
               </div>
 
@@ -74,7 +74,7 @@ function Cart() {
                   placeholder="Mail"
                   aria-label="Recipient's username"
                   aria-describedby="basic-addon2"
-                  defaultValue={datosUsuario.mail}
+                  //defaultValue={datosUsuario.mail}
                 />
                 <span className="input-group-text" id="basic-addon2">
                   Mail
@@ -89,7 +89,7 @@ function Cart() {
                   className="form-control"
                   id="basic-url"
                   aria-describedby="basic-addon3"
-                  defaultValue={datosUsuario.telefono}
+                  //defaultValue={datosUsuario.telefono}
                 />
               </div>
             </div>
