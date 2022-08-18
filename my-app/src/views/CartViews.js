@@ -7,7 +7,18 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 
 function Cart() {
-  const { clearCart, precioFinal, crearOrdenContext } = useCartContext();
+  const { clearCart, precioFinal, cartConfirm } = useCartContext();
+
+  const generarCodigo = () => {
+    const formulario = document.getElementById("dataform");
+    formulario.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const nombre = document.getElementById("nombre").value;
+      const mail = document.getElementById("mail").value;
+      const telefono = document.getElementById("telefono").value;
+      const idunico= cartConfirm(nombre, telefono, mail); //Linea q no funciona
+    });
+  };
 
   return (
     <CartContext.Consumer>
@@ -53,7 +64,7 @@ function Cart() {
                   Nombre y apellido
                 </span>
                 <input
-                  type="text"
+                  type="text" id="nombre"
                   className="form-control"
                   placeholder=" Nombre y apellido"
                   aria-label="Username"
@@ -64,7 +75,7 @@ function Cart() {
 
               <div className="input-group mb-3">
                 <input
-                  type="text"
+                  type="email" id="mail"
                   className="form-control"
                   placeholder="Mail"
                   aria-label="Recipient's username"
@@ -80,9 +91,9 @@ function Cart() {
                   Telefono
                 </span>
                 <input
-                  type="text"
+                  type="phone"
                   className="form-control"
-                  id="basic-url"
+                  id="telefono"
                   aria-describedby="basic-addon3"
                   //defaultValue={datosUsuario.telefono}
                 />
@@ -91,7 +102,7 @@ function Cart() {
           </div>
           <div className="btn-checkout">
             {items.length ? (
-              <button className="btn" onClick={crearOrdenContext}>
+              <button type="submit" className="btn" onClick={generarCodigo}>
                 <Link
                   to="/CheckOut"
                   className="btn btn-primary vaciar-checkOut"
