@@ -1,6 +1,6 @@
 import React from "react";
 import { createContext, useState, useContext } from "react";
-import { crearOrden } from "../Firebase/FireBase";
+import { crearOrdenContext } from "../Firebase/FireBase";
 
 const CartContext = createContext({});
 
@@ -37,6 +37,7 @@ export const CartProvider = ({ children }) => {
       setItems(agregarCarrito);
     } else {
       const index = items.findIndex((x) => x.id === id);
+      console.log(carritoId);
       const cart_ = items.slice();
       cart_[index].cantidad = cart_[index].cantidad + cantidad;
       setItems(cart_);
@@ -66,7 +67,7 @@ export const CartProvider = ({ children }) => {
     }
   };
 
-  const crearOrdenContext = (nombre,mail,telefono) => {
+  const cartConfirm = (nombre,mail,telefono) => {
     console.log(nombre,mail,telefono)
     let totalAmount=0
    const orden ={  buyer : {
@@ -90,6 +91,8 @@ export const CartProvider = ({ children }) => {
 
     const idCarrito = crearOrdenContext(orden);
     setCarritoId(idCarrito);
+    console.log(idCarrito);
+    return idCarrito;
   };
 
 
@@ -104,7 +107,7 @@ export const CartProvider = ({ children }) => {
         estaEnCarrito,
         contadorCarrito,
         precioFinal,
-        crearOrdenContext,
+        cartConfirm,
       }}
     >
       {children}

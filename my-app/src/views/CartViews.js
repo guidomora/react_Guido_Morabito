@@ -8,11 +8,6 @@ import { useState } from "react";
 
 function Cart() {
   const { clearCart, precioFinal, crearOrdenContext } = useCartContext();
-  // const [datosUsuario, setUserData] = useState({
-  //   name: "",
-  //   phone: "",
-  //   mail: "",
-  // });
 
   return (
     <CartContext.Consumer>
