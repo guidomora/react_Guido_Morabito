@@ -5,14 +5,15 @@ import "../estilos/ItemDetail.css";
 import ItemCount from "../componente/ItemCount";
 import { useCartContext } from "../componente/CartContext";
 import { getDetail } from "../Firebase/FireBase";
+import Toastify from 'toastify-js'
+
 
 function Detail() {
   let params = useParams();
   const [resultados, setResultados] = useState([]);
   const [unidadProducto, setUnidadProducto] = useState();
   const { addItem } = useCartContext();
-
-
+  
 
   useEffect(() => {
     getDetail(params.id)
@@ -26,7 +27,14 @@ function Detail() {
   }, [params.id]);
 
   const onAdd = (c) => {
-    alert(`Agregaste ${c} unidades`);
+    Toastify({
+      text: `Agregaste ${c} unidades`,
+      className: "info",
+      style: {
+        background: "linear-gradient(to right, #00b09b, #96c93d)",
+      }
+    }).showToast();
+    //alert(`Agregaste ${c} unidades`);
     addItem({
       id: params.id,
       titulo: resultados.titulo,
@@ -52,7 +60,7 @@ function Detail() {
               <p className="item-descripcion1">{resultados.descripcion}</p>
               <p className="item-precio1">$ {resultados.precio}</p>
               <p className="item-stock1"> {"Stock: " + resultados.stock} </p>
-              <ItemCount stock={20} onAdd={onAdd}/>
+              <ItemCount stock={20} onAdd={onAdd} />
               <Link
                 to="/Cart/"
                 className="boton-compra1 btn btn-primary item-boton1"

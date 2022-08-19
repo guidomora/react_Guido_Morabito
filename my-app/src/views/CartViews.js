@@ -4,10 +4,20 @@ import CartItem from "../componente/CartItem";
 import "../estilos/CartItem.css";
 import "../Firebase/FireBase";
 import { Link } from "react-router-dom";
-import { useState } from "react";
 
 function Cart() {
-  const { clearCart, precioFinal, crearOrdenContext } = useCartContext();
+  const { clearCart, precioFinal, cartConfirm } = useCartContext();
+
+  const generarCodigo = () => {
+    const form = document.getElementById("dataform");
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const nombre = document.getElementById("nombre").value;
+      const mail = document.getElementById("mail").value;
+      const telefono = document.getElementById("telefono").value;
+      const idOrden= cartConfirm(nombre, telefono, mail); //Linea q no funciona
+    });
+  };
 
   return (
     <CartContext.Consumer>
@@ -46,30 +56,28 @@ function Cart() {
               Vaciar Carrito
             </button>
           </div>
-          <div className="container">
+          <div className="container" id="dataform">
             <div className="contenedor-orden">
               <div className="input-group mb-3">
                 <span className="input-group-text" id="basic-addon1">
                   Nombre y apellido
                 </span>
                 <input
-                  type="text"
+                  type="text" id="nombre"
                   className="form-control"
                   placeholder=" Nombre y apellido"
                   aria-label="Username"
                   aria-describedby="basic-addon1"
-                  //defaultValue={datosUsuario.nombre}
                 />
               </div>
 
               <div className="input-group mb-3">
                 <input
-                  type="text"
+                  type="email" id="mail"
                   className="form-control"
                   placeholder="Mail"
                   aria-label="Recipient's username"
                   aria-describedby="basic-addon2"
-                  //defaultValue={datosUsuario.mail}
                 />
                 <span className="input-group-text" id="basic-addon2">
                   Mail
@@ -80,18 +88,17 @@ function Cart() {
                   Telefono
                 </span>
                 <input
-                  type="text"
+                  type="phone"
                   className="form-control"
-                  id="basic-url"
+                  id="telefono"
                   aria-describedby="basic-addon3"
-                  //defaultValue={datosUsuario.telefono}
                 />
               </div>
             </div>
           </div>
           <div className="btn-checkout">
             {items.length ? (
-              <button className="btn" onClick={crearOrdenContext}>
+              <button type="submit" className="btn" onClick={generarCodigo}>
                 <Link
                   to="/CheckOut"
                   className="btn btn-primary vaciar-checkOut"

@@ -41,7 +41,9 @@ export const getItemsFiltrados = (categoria) => {
 };
 
 export const crearOrdenContext = async (orden) => {
-  const collectionRef = collection(db, "orders");
-  const docRef = await addDoc(collectionRef, orden);
+  const docRef = await addDoc(collection(db, 'orders'),orden);
+  console.log(docRef.id)
   return docRef.id;
 };
+
+
