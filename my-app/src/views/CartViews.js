@@ -9,13 +9,22 @@ function Cart() {
   const { clearCart, precioFinal, cartConfirm } = useCartContext();
 
   const generarCodigo = () => {
+<<<<<<< HEAD
     const form = document.getElementById("dataform");
     form.addEventListener("submit", (e) => {
+=======
+    const formulario = document.getElementById("dataform");
+    formulario.addEventListener("submit", (e) => {
+>>>>>>> cba426e87927889ceaf330ac2455bc5d1c95c93b
       e.preventDefault();
       const nombre = document.getElementById("nombre").value;
       const mail = document.getElementById("mail").value;
       const telefono = document.getElementById("telefono").value;
+<<<<<<< HEAD
       const idOrden= cartConfirm(nombre, telefono, mail); //Linea q no funciona
+=======
+      const idunico= cartConfirm(nombre, telefono, mail); //Linea q no funciona
+>>>>>>> cba426e87927889ceaf330ac2455bc5d1c95c93b
     });
   };
 
