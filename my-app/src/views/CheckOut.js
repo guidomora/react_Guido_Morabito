@@ -1,9 +1,9 @@
 import React from "react";
 import "../estilos/CheckOut.css";
-// import CartContext, { useCartContext } from "../componente/CartContext";
+
 
 function CheckOut() {
-  // const {} = useCartContext();
+
 
   return (
     <div className="contenedor-orden">

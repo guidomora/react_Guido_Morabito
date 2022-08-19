@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import "../estilos/ItemCount.css";
 
-
 function Contador({ stock, onAdd }) {
   const [valor, setValor] = useState(0);
   const [mostrarCarrito, setMostrarCarrito] = useState(false);
   const showListCart = (evento) => {
     setMostrarCarrito(true);
   };
+
 
 
   function Restar() {

@@ -37,7 +37,6 @@ export const CartProvider = ({ children }) => {
       setItems(agregarCarrito);
     } else {
       const index = items.findIndex((x) => x.id === id);
-      console.log(carritoId);
       const cart_ = items.slice();
       cart_[index].cantidad = cart_[index].cantidad + cantidad;
       setItems(cart_);

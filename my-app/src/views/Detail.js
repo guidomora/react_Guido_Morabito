@@ -13,7 +13,6 @@ function Detail() {
   const [resultados, setResultados] = useState([]);
   const [unidadProducto, setUnidadProducto] = useState();
   const { addItem } = useCartContext();
-  
 
   useEffect(() => {
     getDetail(params.id)
@@ -29,12 +28,17 @@ function Detail() {
   const onAdd = (c) => {
     Toastify({
       text: `Agregaste ${c} unidades`,
-      className: "info",
+      duration: 1000,
+      newWindow: true,
+      close: false,
+      gravity: "top", // `top` or `bottom`
+      position: "left", // `left`, `center` or `right`
+      stopOnFocus: true, // Prevents dismissing of toast on hover
       style: {
         background: "linear-gradient(to right, #00b09b, #96c93d)",
-      }
+      },
+      onClick: function(){} // Callback after click
     }).showToast();
-    //alert(`Agregaste ${c} unidades`);
     addItem({
       id: params.id,
       titulo: resultados.titulo,

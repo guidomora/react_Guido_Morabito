@@ -9,13 +9,13 @@ function Cart() {
   const { clearCart, precioFinal, cartConfirm } = useCartContext();
 
   const generarCodigo = () => {
-    const form = document.getElementById("dataform");
+    const form = document.getElementById("datosUsuario");
     form.addEventListener("submit", (e) => {
       e.preventDefault();
       const nombre = document.getElementById("nombre").value;
       const mail = document.getElementById("mail").value;
       const telefono = document.getElementById("telefono").value;
-      const idunico= cartConfirm(nombre, telefono, mail); //Linea q no funciona
+      const idUnico= cartConfirm(nombre, telefono, mail);
     });
   };
 
@@ -23,7 +23,7 @@ function Cart() {
     <CartContext.Consumer>
       {({ carrito: items }) => (
         <div>
-          <div className="contenedor-gral" id="dataform">
+          <div className="contenedor-gral" id="datosUsuario">
             {items.length ? (
               items.map(
                 (element) => (

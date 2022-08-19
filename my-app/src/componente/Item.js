@@ -3,10 +3,6 @@ import { Link } from "react-router-dom";
 import '../estilos/Item.css'
 
 
-
-
-
-
 function Item ({id, titulo, precio, imagen, stock}) {
   
 

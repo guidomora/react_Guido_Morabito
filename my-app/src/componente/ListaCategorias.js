@@ -1,11 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import Item from "./Item";
 const FiltradoCategorias = () => {
   const params = useParams();
   const [data, setData] = useState([]);
-  const [err, setErr] = useState("");
 
   useEffect(() => {
     getProductsByCategoryId(params.id).then((categoryId) => {

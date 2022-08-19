@@ -4,7 +4,6 @@ import ItemList from "./ItemList";
 import { getProductos } from "../Firebase/FireBase";
 
 function ItemListContainer() {
-  const [carga, setCarga] = useState(true);
   const [productos, setProductos] = useState([]);
 
 
