@@ -6,7 +6,7 @@ import "../Firebase/FireBase";
 import { Link } from "react-router-dom";
 
 function Cart() {
-  const { clearCart, precioFinal, cartConfirm } = useCartContext();
+  const { clearCart, precioFinal, confirmarOrden } = useCartContext();
 
   const generarCodigo = () => {
     const form = document.getElementById("datosUsuario");
@@ -15,7 +15,7 @@ function Cart() {
       const nombre = document.getElementById("nombre").value;
       const mail = document.getElementById("mail").value;
       const telefono = document.getElementById("telefono").value;
-      const idUnico= cartConfirm(nombre, telefono, mail);
+      const idUnico= confirmarOrden(nombre, telefono, mail);
     });
   };
 

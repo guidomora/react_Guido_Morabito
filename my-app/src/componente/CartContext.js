@@ -66,7 +66,7 @@ export const CartProvider = ({ children }) => {
     }
   };
 
-  const cartConfirm = (nombre,mail,telefono) => {
+  const confirmarOrden = (nombre,mail,telefono) => {
     console.log(nombre,mail,telefono)
     let totalAmount=0
    const orden ={  buyer : {
@@ -106,7 +106,7 @@ export const CartProvider = ({ children }) => {
         estaEnCarrito,
         contadorCarrito,
         precioFinal,
-        cartConfirm,
+        confirmarOrden,
       }}
     >
       {children}
