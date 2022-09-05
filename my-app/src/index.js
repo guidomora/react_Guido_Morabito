@@ -10,7 +10,6 @@ import { CartProvider } from "./componente/CartContext";
 import "./Firebase/FireBase.js";
 import Home from "./componente/ItemListContainer";
 import Categorias from "./views/Categorias";
-import CheckOut from "./views/CheckOut";
 import Contacto from "./componente/Contacto";
 
 
@@ -25,7 +24,6 @@ root.render(
             <Route path="items/:id" element={<Detail />} />
             <Route path="Cart/" element={<CartViews />} />
             <Route path="tipo/:nombreCategoria" element={<Categorias />}/>
-            <Route path="CheckOut/" element={<CheckOut />} />
             <Route path="Contacto/" element={<Contacto imagen="redes" />} />
           </Route>
         </Routes>

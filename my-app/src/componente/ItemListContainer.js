@@ -5,6 +5,7 @@ import { getProductos } from "../Firebase/FireBase";
 
 function ItemListContainer() {
   const [productos, setProductos] = useState([]);
+  const [loading, setLoading] = useState(true);
 
 
   useEffect(() => {
@@ -15,6 +16,7 @@ function ItemListContainer() {
             return { id: doc.id, ...doc.data() };
           })
         );
+        setTimeout(setLoading, 1000, false);
       })
       .catch((err) => {
         console.log(err);
@@ -26,8 +28,17 @@ function ItemListContainer() {
 
   return (
     <div>
-        <ItemList Items={productos} />
-    </div>
+    {loading ? (
+      <div className="spinner">
+        <h2 className="carga"> Cargando</h2>
+        <div className="spinner-border" role="status">
+          <span className="visually-hidden"></span>
+        </div>
+      </div>
+    ) : (
+      <ItemList Items={productos} />
+    )}
+  </div>
   );
 }
 

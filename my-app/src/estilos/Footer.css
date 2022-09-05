@@ -1,12 +1,30 @@
 .footer-container {
-    height: 80px;
+    height: 130px;
     width: 100%;
     background-color: #6d6875;
     margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    color: white;
 }
 
 .texto-footer {
     text-align: center;
     color: white;
     font-size: 17px;
+}
+
+.footer-iconos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.wpp {
+    color: rgb(6, 196, 6);
+}
+.instagram {
+    color: #833AB4;
 }
