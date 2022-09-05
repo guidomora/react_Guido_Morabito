@@ -37,6 +37,11 @@ function NavBar (props) {
                     <Link to="/tipo/Ramo" className="botones-ruta">Ramos de flores</Link>    
                     </button>
                 </li>
+                <li className="lista-nav">
+                    <button type="button" className="btn btn-primary lista-boton">
+                    <Link to="/Contacto" className="botones-ruta">Contacto</Link>    
+                    </button>
+                </li>
                 <CarWidget/>
             </ul>
         </nav>

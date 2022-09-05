@@ -11,6 +11,7 @@ import "./Firebase/FireBase.js";
 import Home from "./componente/ItemListContainer";
 import Categorias from "./views/Categorias";
 import CheckOut from "./views/CheckOut";
+import Contacto from "./componente/Contacto";
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -25,6 +26,7 @@ root.render(
             <Route path="Cart/" element={<CartViews />} />
             <Route path="tipo/:nombreCategoria" element={<Categorias />}/>
             <Route path="CheckOut/" element={<CheckOut />} />
+            <Route path="Contacto/" element={<Contacto imagen="redes" />} />
           </Route>
         </Routes>
       </BrowserRouter>
