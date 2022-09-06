@@ -3,7 +3,6 @@ import CartContext, { useCartContext } from "../componente/CartContext";
 import CartItem from "../componente/CartItem";
 import "../estilos/CartItem.css";
 import "../Firebase/FireBase";
-import { Link } from "react-router-dom";
 
 function Cart() {
   const { clearCart, precioFinal, confirmarOrden } = useCartContext();
@@ -95,21 +94,6 @@ function Cart() {
                 />
               </div>
             </div>
-          </div>
-          <div className="btn-checkout">
-            {items.length ? (
-              <button type="submit" className="btn" onClick={generarCodigo}>
-                <Link
-                  to="/CheckOut"
-                  className="btn btn-primary vaciar-checkOut"
-                >
-                  {" "}
-                  Ir al checkout
-                </Link>
-              </button>
-            ) : (
-              <p></p>
-            )}
           </div>
         </div>
       )}

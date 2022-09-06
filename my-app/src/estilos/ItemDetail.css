@@ -71,3 +71,54 @@
 .boton-compra1 {
     margin: 5px;
 }
+
+/* -----------mobile------------- */
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+}
+/* ------------------------------------ */
+@media only screen and (max-width: 767px) {
+    
+    .item-titulo1 {
+        text-align: center;
+        font-size: 27px;
+        margin: 10px;
+    }
+
+    .item-precio1 {
+        font-weight: bold;
+        font-size: 20px;
+        margin: 14px;
+    }
+    
+    .item-descripcion1 {
+        font-size: 19px;
+        text-align: center;
+        margin: 5px;
+    }
+    
+
+    .item-imagen1 {
+        height: 400px;
+        width: 400px;
+        object-fit: cover;
+        margin: 20px;
+    }
+
+    .item-aside1 {
+        height: 500px;
+        width: 450px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content:center;
+    }
+    
+    .item-stock1 {
+        font-size: 20px;
+        margin: 10px;
+    }
+}
+/* ------------------------------------ */

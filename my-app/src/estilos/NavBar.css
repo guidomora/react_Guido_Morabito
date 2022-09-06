@@ -45,3 +45,184 @@
     color: rgb(255, 255, 255);
     text-decoration: none;
   }
+
+  /* -----------mobile------------- */
+  @media only screen and (min-width: 1023px) and (max-width: 1500px) {
+    nav {
+      background-color: #FCD5CE;
+      width: 100%;
+      height: 240px;
+    }
+  
+    .nav-container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  
+    .imagen-home{
+      height: 150px;
+    }
+    
+    
+    .flex {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-content: center;
+      justify-content: center;
+    }
+    
+    .lista-nav {
+      display: flex;
+      align-content: center;
+      margin: 5px;
+    }
+  
+    .botones {
+      text-align: center;
+      height: 50px;
+      width: 150px;
+      padding: 0px;
+      font-size: 18px;
+    }
+  
+    .botones-chicos {
+      height: 50px;
+      width: 95px;
+      text-align: center;
+      font-size: 17px;
+    }
+  
+    .lista-boton :hover {
+      color: aliceblue;
+    }
+    
+    .botones-ruta {
+      color: rgb(255, 255, 255);
+      text-decoration: none;
+    }
+
+  }
+
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+  nav {
+    background-color: #FCD5CE;
+    width: 100%;
+    height: 260px;
+  }
+
+  .nav-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .imagen-home{
+    height: 100px;
+  }
+  
+  
+  .flex {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+  }
+  
+  .lista-nav {
+    display: flex;
+    align-content: center;
+    margin: 5px;
+  }
+
+  .botones {
+    text-align: center;
+    height: 50px;
+    width: 150px;
+    padding: 0px;
+    font-size: 18px;
+  }
+
+  .botones-chicos {
+    height: 50px;
+    width: 95px;
+    text-align: center;
+    font-size: 17px;
+  }
+
+  .lista-boton :hover {
+    color: aliceblue;
+  }
+  
+  .botones-ruta {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+  }
+
+}
+/* ------------------------------------ */
+@media only screen and (max-width: 767px) {
+
+  nav {
+    background-color: #FCD5CE;
+    width: 100%;
+    height: 260px;
+  }
+
+  .nav-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .imagen-home{
+    height: 100px;
+  }
+  
+  
+  .flex {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+  }
+  
+  .lista-nav {
+    display: flex;
+    align-content: center;
+    font-size: 20px;
+    margin: 5px;
+  }
+
+  .botones {
+    text-align: center;
+    height: 35px;
+    width: 150px;
+    padding: 0px;
+  }
+
+  .botones-chicos {
+    height: 35px;
+    width: 90px;
+    text-align: center;
+  }
+
+  .lista-boton :hover {
+    color: aliceblue;
+  }
+  
+  .botones-ruta {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+  }
+
+}
+/* ------------------------------------ */
