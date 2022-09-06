@@ -65,3 +65,74 @@
 .instagram {
     color: #833AB4;
 }
+
+/* -----------mobile------------- */
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .iframe {
+        width:350px;
+        height:380px;
+        box-shadow: 0 3px 13px 1px rgb(0 0 0 / 10%);
+    }
+
+    .titulos {
+        font-size: 26px;
+    }
+    
+    .fuente {
+        font-size: 20px;
+    }
+}
+/* ------------------------------------ */
+@media only screen and (max-width: 767px) {
+    
+    .titulos {
+        font-size: 24px;
+    }
+    
+    .fuente {
+        font-size: 17px;
+    }
+    
+    
+    .iframe {
+        width:330px;
+        height:360px;
+        box-shadow: 0 3px 13px 1px rgb(0 0 0 / 10%);
+    }
+    
+    .horario {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 10px;
+    }
+    .container-redes{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 20px;
+    }
+    
+    .flex-redes {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 10px;
+    }
+
+    .redes{
+        box-shadow: 0 3px 13px 1px rgb(0 0 0 / 10%);
+        width:330px;
+        height:360px;
+    }
+    
+
+}
+/* ------------------------------------ */
