@@ -7,7 +7,7 @@ function Footer () {
             <p className='texto-footer'> Todos los derechos reservados 2022 </p>
             <p> Teléfono: 43011744 </p>
             <div className="footer-iconos">
-            <a href="https://web.whatsapp.com/send?phone=5491169402036" className="wpp" target="blank">
+            <a href="https://wa.me/541169402036" className="wpp" target="blank">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="25"

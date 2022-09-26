@@ -51,7 +51,7 @@ function Contacto(redes) {
           </p>
           <p className="fuente">
             WhatsApp :
-            <a href="https://web.whatsapp.com/send?phone=5491169402036" target="blank">
+            <a href="https://wa.me/541169402036" target="blank">
               {" "}
               11-6940-2036{" "}
               <svg
