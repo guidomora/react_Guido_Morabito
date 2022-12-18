@@ -6,11 +6,11 @@ const WhatsApp = () => {
     <div className="widget-contacto">
       <a href="https://wa.me/541169402036" target="blank">
         {" "}
-        Contactanos!{" "}
+        {" "}
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="25"
-          height="25"
+          width="34"
+          height="34"
           fill="currentColor"
           className="bi bi-whatsapp iconos wpp"
           viewBox="0 0 16 16"

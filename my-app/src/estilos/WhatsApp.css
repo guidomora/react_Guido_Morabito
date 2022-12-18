@@ -1,6 +1,8 @@
 .widget-contacto {
-    position: sticky;
-    bottom: 200px;
+    display: flex;
+    justify-content: flex-end;
+    position:sticky;
+    top: 10px;
 }
 
 .wpp {
