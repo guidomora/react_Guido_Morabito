@@ -9,8 +9,8 @@ const WhatsApp = () => {
         {" "}
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="34"
-          height="34"
+          width="40"
+          height="40"
           fill="currentColor"
           className="bi bi-whatsapp iconos wpp"
           viewBox="0 0 16 16"
