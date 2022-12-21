@@ -7,9 +7,9 @@ import WhatsApp from "./componente/WhatsApp";
 
 function App() {
   return (
-    <div>
+    <div >
       <NavBar imagen="LogoReact" />
-      <main>
+      <main className="App-js">
         <WhatsApp />
         <Outlet />
       </main>
