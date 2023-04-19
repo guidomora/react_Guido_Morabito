@@ -52,6 +52,11 @@
     margin: 0px;
 }
 
+.item-boton {
+    background-color: #9d0208;
+    color: aliceblue;
+}
+
 .item-boton :hover {
     color: aliceblue;
   }

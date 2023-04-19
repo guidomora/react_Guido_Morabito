@@ -63,15 +63,6 @@ function Detail() {
             <div className="item-aside1">
               <p className="item-descripcion1">{resultados.descripcion}</p>
               <p className="item-precio1">$ {resultados.precio}</p>
-              <p className="item-stock1"> {"Stock: " + resultados.stock} </p>
-              <ItemCount stock={20} onAdd={onAdd} />
-              <Link
-                to="/Cart/"
-                className="boton-compra1 btn btn-primary item-boton1"
-              >
-                {" "}
-                Ir al Carrito{" "}
-              </Link>
             </div>
           </div>
         </div>
