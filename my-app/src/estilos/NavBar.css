@@ -53,6 +53,19 @@
     text-decoration: none;
   }
 
+  .telefono-nav {
+    display: flex;
+    align-items: center;
+    border: solid 2px;
+    border-radius: 5px;
+    padding: 5px;
+  }
+
+  .margin-telefono{
+    margin-bottom: 0;
+    margin-left: 10px;
+  }
+
   /* -----------mobile------------- */
   @media only screen and (min-width: 1023px) and (max-width: 1500px) {
     nav {
