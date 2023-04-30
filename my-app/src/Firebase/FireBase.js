@@ -8,6 +8,7 @@ import {
   query,
   where,
   addDoc,
+  orderBy,
 } from "firebase/firestore";
 
 const firebaseConfig = {
@@ -24,7 +25,7 @@ const db = getFirestore(app);
 
 export const getProductos = () => {
   const productosList = collection(db, "items");
-  const q = query(productosList);
+  const q = query(productosList, orderBy("precio", "desc"));
   return getDocs(q);
 };
 

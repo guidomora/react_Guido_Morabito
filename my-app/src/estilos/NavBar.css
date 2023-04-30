@@ -5,7 +5,7 @@
   nav {
     background-color: #FCD5CE;
     width: 100%;
-    height: 130px;
+    height: 140px;
   }
 
   .nav-container {
@@ -19,7 +19,6 @@
   .imagen-home{
     height: 130px;
   }
-  
   
   .flex {
     list-style: none;
@@ -39,6 +38,9 @@
 
   .lista-boton {
     background-color: #9d0208;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 50px;
     font-size: 18px;
   }
@@ -71,7 +73,7 @@
     nav {
       background-color: #FCD5CE;
       width: 100%;
-      height: 240px;
+      height: 250px;
     }
   
     .nav-container {
@@ -124,6 +126,14 @@
       text-decoration: none;
     }
 
+    .telefono-nav {
+      display: flex;
+      align-items: center;
+      border: solid 2px;
+      border-radius: 5px;
+      padding: 5px;
+    }
+
   }
 
 
@@ -132,7 +142,7 @@
   nav {
     background-color: #FCD5CE;
     width: 100%;
-    height: 260px;
+    height: 280px;
   }
 
   .nav-container {
@@ -185,6 +195,21 @@
     text-decoration: none;
   }
 
+  .telefono-nav {
+    display: flex;
+    align-items: center;
+    border: solid 2px;
+    border-radius: 5px;
+    padding: 2px;
+    font-size: 18px;
+  }
+
+  .clase-svg {
+    height:18px ;
+    width:18px ;
+  }
+
+
 }
 /* ------------------------------------ */
 @media only screen and (max-width: 767px) {
@@ -192,7 +217,7 @@
   nav {
     background-color: #FCD5CE;
     width: 100%;
-    height: 260px;
+    height: 280px;
   }
 
   .nav-container {
@@ -242,6 +267,20 @@
   .botones-ruta {
     color: rgb(255, 255, 255);
     text-decoration: none;
+  }
+
+  .telefono-nav {
+    display: flex;
+    align-items: center;
+    border: solid 2px;
+    border-radius: 5px;
+    padding: 2px;
+    font-size: 18px;
+  }
+
+  .clase-svg {
+    height:18px ;
+    width:18px ;
   }
 
 }

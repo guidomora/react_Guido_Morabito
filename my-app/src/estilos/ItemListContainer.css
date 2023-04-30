@@ -1,3 +1,8 @@
+.descripcion {
+    margin: 15px;
+    border-radius: 5px;
+}
+
 .spinner {
     display: flex;
     flex-direction: row;
@@ -8,4 +13,87 @@
 
 .carga {
     margin: 10px;
+
 }
+
+.title {
+    font-size: 47px;
+    padding: 10px;
+    text-align: center;
+}
+
+.texto {
+    font-size: 23px;
+    padding: 10px;
+    text-align: center;
+}
+
+
+/* -----------mobile------------- */
+@media only screen and (min-width: 1023px) and (max-width: 1500px) {
+    .descripcion {
+        margin: 15px;
+        border-radius: 5px;
+    }
+
+
+
+    .title {
+        font-size: 40px;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .texto {
+        font-size: 30px;
+        padding: 10px;
+        text-align: center;
+    }
+
+}
+
+/* -----------mobile------------- */
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .descripcion {
+        margin: 15px;
+        border-radius: 5px;
+    }
+
+
+    .title {
+        font-size: 40px;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .texto {
+        font-size: 30px;
+        padding: 10px;
+        text-align: center;
+    }
+}
+
+/* ------------------------------------ */
+@media only screen and (max-width: 767px) {
+    .descripcion {
+        margin: 15px;
+        border-radius: 5px;
+    }
+
+
+    .title {
+        font-size: 29px;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .texto {
+        font-size: 18px;
+        padding: 10px;
+        text-align: center;
+    }
+
+}
+
+/* ------------------------------------ */

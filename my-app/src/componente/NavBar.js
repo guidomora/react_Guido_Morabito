@@ -62,7 +62,7 @@ function NavBar(props) {
               width="23"
               height="23"
               fill="currentColor"
-              className="bi bi-telephone-fill"
+              className="bi bi-telephone-fill clase-svg"
               viewBox="0 0 16 16"
             >
               <path
