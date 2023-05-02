@@ -1,0 +1,18 @@
+.flechas {
+    cursor: pointer;
+    font-size: 50px;
+    margin: 8px;
+}
+
+.flechas-izquierda {
+    cursor: pointer;
+    font-size: 50px;
+    margin: 8px;
+    margin-right: 18px;
+}
+
+.carousel {
+    height: 230px;
+    display: flex;
+    align-items: center;
+}

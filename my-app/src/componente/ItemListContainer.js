@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../estilos/ItemListContainer.css";
 import ItemList from "./ItemList";
 import { getProductos } from "../Firebase/FireBase";
+import CarouselFlorerias from "./CarouselFlorerias";
 
 function ItemListContainer() {
   const [productos, setProductos] = useState([]);
@@ -26,12 +27,15 @@ function ItemListContainer() {
   return (
     <div>
       <div className="descripcion">
-            <h1 className="title">Fundada en 1920.</h1>
-            <p className="texto">
-              Especialistas en condolencias: Coronas, Palmas y Bouquets. Trabajo
-              artesanal y calidad premium.
-            </p>
-          </div>
+        <h1 className="title">Fundada en 1920.</h1>
+        <p className="texto">
+          Especialistas en condolencias: Coronas, Palmas y Bouquets. Trabajo
+          artesanal y calidad premium.
+        </p>
+      </div>
+      <div>
+        <CarouselFlorerias />
+      </div>
       {loading ? (
         <div className="spinner">
           <h2 className="carga"> Cargando</h2>
