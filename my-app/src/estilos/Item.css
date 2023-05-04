@@ -3,6 +3,16 @@
     margin: 0px;
 }
 
+.superlink {
+    text-decoration: none;
+    color: black;
+}
+
+.superlink:hover {
+    text-decoration: none;
+    color: black;
+}
+
 .item {
     height: 500px;
     width: 450px;
@@ -45,7 +55,7 @@
 .item-imagen {
     height: 300px;
     width: 250px;
-    object-fit:fill;
+    object-fit:contain;
     margin: 0px;
 }
 

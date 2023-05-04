@@ -37,7 +37,7 @@ export const getDetail = async (productoId) => {
 
 export const getItemsFiltrados = (categoria) => {
   const colRef = query(collection(db, "items"));
-  const q = query(colRef, where("tipo", "==", categoria));
+  const q = query(colRef, where("tipo", "==", categoria), orderBy("precio", "desc"));
   return getDocs(q);
 };
 
