@@ -3,6 +3,7 @@ import "../estilos/ItemListContainer.css";
 import ItemList from "./ItemList";
 import { getProductos } from "../Firebase/FireBase";
 import CarouselFlorerias from "./CarouselFlorerias";
+import NuestrasFlore from "./NuestrasFlore";
 
 function ItemListContainer() {
   const [productos, setProductos] = useState([]);
@@ -24,6 +25,8 @@ function ItemListContainer() {
       });
   }, []);
 
+  const win = window.innerWidth;
+
   return (
     <div>
       <div className="descripcion">
@@ -34,7 +37,7 @@ function ItemListContainer() {
         </p>
       </div>
       <div>
-        <CarouselFlorerias />
+        {win > 1000 ? <NuestrasFlore /> : <CarouselFlorerias />}
       </div>
       {loading ? (
         <div className="spinner">

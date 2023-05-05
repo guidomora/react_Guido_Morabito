@@ -6,53 +6,43 @@ import FlechaIzquierda from "./FlechaIzquierda";
 
 const CarouselFlorerias = () => {
   const win = window.innerWidth;
-  let cards = 3;
+  let cards = 1;
 
-  if (win < 500) {
-    cards = 1;
-  } else if (win < 900 && win > 501) {
-    cards = 3;
-  } else if (win < 1100 && win > 901) {
-    cards = 4;
-  } else if (win < 1300 && win > 1101) {
-    cards = 5;
+  if (win > 500) {
+    cards = 2;
   }
 
   return (
-    <div className="carousel">
-      <Carousel
-        show={cards}
-        slide={1}
-        transition={0.5}
-        swiping={true}
-        rightArrow={<FlechaDerecha />}
-        leftArrow={<FlechaIzquierda />}
-      >
-        <div>
-          <h3>floreria las violetas</h3>
-        </div>
-        <div>
-          <h3>floreria las violetas</h3>
-        </div>
-        <div>
-          <h3>floreria las violetas</h3>
-        </div>
-        <div>
-          <h3>floreria las violetas</h3>
-        </div>
-        <div>
-          <h3>floreria las violetas</h3>
-        </div>
-        <div>
-          <h3>floreria las violetas</h3>
-        </div>
-        <div>
-          <h3>floreria las violetas</h3>
-        </div>
-        <div>
-          <h3>floreria las violetas</h3>
-        </div>
-      </Carousel>
+    <div>
+      <div>
+        <h1 className="titulo">Nuestras Florerias</h1>
+      </div>
+      <div className="carousel">
+        <Carousel
+          show={cards}
+          slide={1}
+          transition={0.5}
+          swiping={true}
+          rightArrow={<FlechaDerecha />}
+          leftArrow={<FlechaIzquierda />}
+        >
+          <div>
+            <img
+              src={require(`../multimedia2/Las Camelias.png`)}
+              className="imgs"
+            />
+          </div>
+          <div>
+            <img
+              src={require(`../multimedia2/buenos aires flores.png`)}
+              className="imgs"
+            />
+          </div>
+          <div>
+            <img src={require(`../multimedia2/mora..png`)} className="imgs" />
+          </div>
+        </Carousel>
+      </div>
     </div>
   );
 };

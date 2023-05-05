@@ -12,7 +12,30 @@
 }
 
 .carousel {
-    height: 230px;
+    height: 280px;
     display: flex;
     align-items: center;
+}
+
+.imgs {
+    height: 250px;
+}
+
+/* ------------------------ NuestrasFlore ----------------------------------------- */
+
+.generalContainer {
+    padding: 40px;
+}
+
+.titulo {
+    text-align: center;
+}
+
+.containerImgs {
+    height: 250px;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
 }
